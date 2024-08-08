@@ -9,7 +9,7 @@ export async function POST(req: Request) {
 
   try {
     const { data, error } = await resend.emails.send({
-      from: 'onboarding@resend.dev',
+      from: 'Acme <onboarding@resend.dev>',
       to: body.email,
       subject: 'Activate Your UneComp Account by Verifying Your Email',
       html: `<div class="max-w-lg mx-auto my-8 bg-white p-6 border border-gray-200 rounded-lg shadow-lg">
@@ -42,11 +42,13 @@ export async function POST(req: Request) {
     });
 
     if (error) {
+      console.log( " Mail Condition Error " +  error)
       return Response.json({ error }, { status: 500 });
     }
 
     return Response.json(data);
   } catch (error) {
+    console.log( " Mail Error " +  error)
     return Response.json({ error }, { status: 500 });
   }
 }
