@@ -1,0 +1,260 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* scrollbar.css */
+
+/* Width of the entire scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+/* Background of the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #e0f7fa; /* Light green background for the track */
+}
+
+/* Background of the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #a5d6a7; /* Light green color for the thumb */
+  border-radius: 10px;
+  border: 3px solid #e0f7fa; /* Same as track background to create padding effect */
+}
+
+/* Background of the scrollbar thumb when hovered */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #81c784; /* Slightly darker light green color for the thumb when hovered */
+}
+
+/* Background of the scrollbar corner where the horizontal and vertical scrollbars meet */
+::-webkit-scrollbar-corner {
+  background: #e0f7fa; /* Same as track background */
+}
+
+/* Buttons at the end of the scrollbar (optional) */
+::-webkit-scrollbar-button {
+  background-color: #a5d6a7; /* Light green color for the buttons */
+  height: 16px;
+  width: 16px;
+}
+
+::-webkit-scrollbar-button:horizontal:decrement {
+  background-color: #66bb6a; /* Left arrow button */
+}
+
+::-webkit-scrollbar-button:horizontal:increment {
+  background-color: #66bb6a; /* Right arrow button */
+}
+
+::-webkit-scrollbar-button:vertical:decrement {
+  background-color: #66bb6a; /* Up arrow button */
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+  background-color: #66bb6a; /* Down arrow button */
+}
+
+
+
+
+body {
+  width: 100vw!important;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+.background-image {
+  background-image: url('../assets/architecture.jpg');
+  background-size: cover;
+  background-position: center;
+  /* width: 900px;
+  height: 900px; */
+
+
+
+}
+/* 
+@keyframes carouselAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.carousel .slide {
+  animation: carouselAnimation 10s infinite linear;
+} */
+
+.scroller{
+  max-width: 100%;
+}
+
+.scroller__inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 40s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+/* general styles */
+
+:root {
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-primary-100: hsl(205, 15%, 58%);
+  --clr-primary-400: hsl(215, 25%, 27%);
+  --clr-primary-800: hsl(217, 33%, 17%);
+  --clr-primary-900: hsl(218, 33%, 9%);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  display: grid;
+  min-block-size: 100vh;
+  place-content: center;
+  font-family: system-ui;
+  font-size: 1.125rem;
+  background-color: var(--clr-primary-800);
+}
+
+.tag-list {
+  margin: 0;
+  padding-inline: 0;
+  list-style: none;
+}
+
+.tag-list li {
+  padding: 1rem;
+  background: var(--clr-primary-400);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
+}
+
+/* for testing purposes to ensure the animation lined up correctly */
+.test {
+  background: red !important;
+}
+
+
+/* Base styles for the links */
+
+.store-image{
+  background-image: url('https://img.freepik.com/premium-photo/shopping-cart-with-shopping-iconsonline-shopping-concepts_29488-6118.jpg');
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+.nav-link {
+  cursor: pointer;
+  text-decoration: none;
+  color: #285d31;
+  font-weight: bold;
+  font-size: 1.25rem; /* 20px */
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.5rem;
+}
+
+/* Active state styles */
+.nav-link.active {
+  color: #4caf50; /* Change color for active state */
+  /* border-bottom-color: #4caf50; */
+}
+
+/* Animation for active state */
+.nav-link.active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #4caf50;
+  animation: slideIn 1s forwards;
+}
+
+/* Slide in animation */
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
