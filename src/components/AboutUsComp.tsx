@@ -91,7 +91,7 @@ const AboutUsComp = () => {
             Welcome to our company. We are dedicated to providing the best service possible. Our team is composed of highly skilled professionals who are passionate about what they do. We believe in innovation, quality, and customer satisfaction. Our mission is to deliver exceptional value to our customers through our products and services.
           </p>
           <p className="text-gray-600">
-            Founded in 2021, we have quickly established ourselves as a leader in the industry. Our commitment to excellence has driven us to continuously improve and adapt to the changing needs of our customers. Thank you for choosing us, and we look forward to serving you.
+            Founded in 2024, we have quickly established ourselves as a leader in the industry. Our commitment to excellence has driven us to continuously improve and adapt to the changing needs of our customers. Thank you for choosing us, and we look forward to serving you.
           </p>
         </div>
       </div>

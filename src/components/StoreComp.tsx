@@ -116,7 +116,7 @@ const StoreComp = () => {
 
   return (
     <>
-      <div className='w-full flex flex-col mt-10 justify-evenly gap-16 overflow-y-scroll items-center flex-wrap min-h-[100vh] p-2'>
+      {/* <div className='w-full flex flex-col mt-10 justify-evenly gap-16 overflow-y-scroll items-center flex-wrap min-h-[100vh] p-2'>
         <div className='w-full flex mt-10 justify-evenly gap-16 items-center flex-wrap h-full p-2'>
           {loading ? (
             <StoreLoading />
@@ -200,7 +200,85 @@ const StoreComp = () => {
             ))
           )}
         </div>
+      </div> */}
+        <div className='w-full flex flex-col mt-10 justify-evenly gap-16 overflow-y-scroll items-center flex-wrap min-h-[100vh] p-2'>
+        <div className='w-full flex mt-10 justify-evenly gap-16 items-center flex-wrap h-full p-2'>
+          {loading ? (
+            <StoreLoading />
+          ) : searchItem.length > 0 ? (
+            searchItem.map((product) => (
+              <React.Fragment key={product._id}>
+                <ToastContainer className="z-50 mt-[100px]" />
+                <div className='m-0 w-[300px] border border-red-200 shadow-lg p-4 lg:w-[200px]'>
+                  <div>
+                    <Image
+                      src={product.fileURL}
+                      alt={product.productName}
+                      width={500}
+                      height={500}
+                    />
+                    <div className='mt-6 space-y-3'>
+                      <h3 className='text-md font-semibold'>{product.productName}</h3>
+                      <details>
+                        <summary className='text-sm font-semibold'>Description of Product</summary>
+                        <p className='text-sm'>{product.productDescription}</p>
+                      </details>
+                      <p className='text-green-600 text-2xl'>RS-{product.productPrice}</p>
+                    </div>
+                  </div>
+                  <hr className='my-4' />
+                  <div className='flex flex-col space-y-2'>
+                    <Link href={`/store/${product.productCategory}/${product._id}`}>
+                      <button className='bg-green-500 text-white py-2 px-4 rounded'>
+                        <span className='text-sm'>Product Details</span>
+                      </button>
+                    </Link>
+                    <button onClick={() => addToCart(product.productCategory, product._id)} className='bg-transparent text-green-500 border border-green-500 py-2 px-4 rounded'>
+                      <span className='text-sm'>Add to cart</span>
+                    </button>
+                  </div>
+                </div>
+              </React.Fragment>
+            ))
+          ) : (
+            filteredProducts.map((product: any) => (
+              <div key={product._id}>
+                <ToastContainer className="z-50 mt-[100px]" />
+                <div className='m-0 border w-[300px] border-gray-200 shadow-lg p-4 lg:w-[200px]'>
+                  <div>
+                    <Image
+                      src={product.fileURL}
+                      alt={product.productName}
+                      width={500}
+                      height={500}
+                    />
+                    <div className='mt-6 space-y-3'>
+                      <p className='text-md font-semibold'>{product.productName}</p>
+                      <details>
+                        <summary className='text-sm font-semibold'>Description of Product</summary>
+                        <p className='text-sm'>{product.productDescription}</p>
+                      </details>
+                      <p className='text-green-600 text-2xl'>RS-{product.productPrice}</p>
+                    </div>
+                  </div>
+                  <hr className='my-4' />
+                  <div className='flex flex-col space-y-2'>
+                    <Link href={`/store/${product.productCategory}/${product._id}`}>
+                      <button className='bg-green-500 text-white py-2 px-4 rounded'>
+                        <span className='text-sm'>Product Details</span>
+                      </button>
+                    </Link>
+                    <button onClick={() => addToCart(product.productCategory, product._id)} className='bg-transparent text-green-500 border border-green-500 py-2 px-4 rounded'>
+                      <span className='text-sm'>Add to cart</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))
+          )}
+        </div>
       </div>
+
     </>
   )
 }

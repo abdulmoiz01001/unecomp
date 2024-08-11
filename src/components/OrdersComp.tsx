@@ -157,9 +157,10 @@ const OrdersComp = () => {
   // ];
 
   console.log('Orders:', orders);
-
-  const sortedOrders = orders.sort((a, b) => new Date(b.orderDate).getTime() - new Date(a.orderDate).getTime());
-
+  let sortedOrders : Order[] = [];
+ if(orders.length > 0){
+     sortedOrders = orders.sort((a, b) => new Date(b.orderDate).getTime() - new Date(a.orderDate).getTime());
+ }
   return (
     <>
 
