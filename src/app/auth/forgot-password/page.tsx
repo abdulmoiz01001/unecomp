@@ -8,7 +8,7 @@ const ForgotPasswordPage = () => {
   return (
   <>
 <Suspense fallback={<div>Loading...</div>}>
-      <ForgotPasswordPage />
+      <ForgotPassword />
     </Suspense>
   </>
   )
