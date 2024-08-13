@@ -31,34 +31,25 @@ const SignupComp = () => {
      // const makeObject = async () => {
      //     console.log(name)
      // }
-     const handleSubmit = async (e : React.FormEvent<HTMLFormElement> ) => {
-         e.preventDefault();
-         setSpinner(true)
-         let values = {  name , email , password , gender}
- // set it for typescript error
-
-
-
-
-         registerAction( values ).then((res  : any) => {
-            
-
-                console.log(res!)
-
-
-                
-                setMail(res.message)
+    const handleSubmit = async (e : React.FormEvent<HTMLFormElement> ) => {
+        e.preventDefault();
+        setSpinner(true)
+        try {
+            const values = { name, email, password, gender };
+            const res : any = await registerAction(values);
+            if (res.error) {
+                setError(res.error);
+                return;
+            }else{
+                setMail(res.message);
             }
-            
-            ).catch((e) => {
-                console.log(e)
-                setError(e.message)
-            })
-           
-         
-         console.log(e)
-        setSpinner(false)
-     }
+        } catch (e: any) {
+            console.log(e);
+            setError(e.message);
+        } finally {
+            setSpinner(false); // Stop spinner
+        }
+    }
 
 
   return (

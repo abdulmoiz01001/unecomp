@@ -48,10 +48,10 @@ const DashboardComp = () => {
             </div>
         </div>
         <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-4'>
-            <div className='bg-white shadow-md p-4 rounded-md flex flex-col justify-center items-center' style={{ height: '12rem' }}>
+            {/* <div className='bg-white shadow-md p-4 rounded-md flex flex-col justify-center items-center' style={{ height: '12rem' }}>
                 <h2 className='text-xl font-semibold mb-2'>Today Notifications</h2>
                 <p className='text-2xl'>{statics.todayNotification.length}</p>
-            </div>
+            </div> */}
             <div className='bg-white shadow-md p-4 rounded-md flex flex-col justify-center items-center' style={{ height: '12rem' }}>
                 <h2 className='text-xl font-semibold mb-2'>Pending Tasks</h2>
                 <p className='text-2xl'>15</p>

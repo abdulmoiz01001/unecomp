@@ -1,5 +1,3 @@
-
-
 "use client"
 import React, { useEffect, useState } from 'react'
 import { Box, Button, ButtonGroup, Card, CardBody, CardFooter, CircularProgress, Divider, Heading, Stack, Text } from '@chakra-ui/react'
@@ -24,6 +22,7 @@ const StoreComp = () => {
   const products = useSelector((state: RootState) => state.products.products)
   const [filteredProducts, setFilteredProducts] = useState<any>([])
   const [loading, setLoading] = useState(true)
+  const [loadingState, setLoadingState] = useState<string | null>(null)
 
   // Fetch all products
   const fetchProducts = async () => {
@@ -81,6 +80,7 @@ const StoreComp = () => {
   }
 
   const addToCart = async (category: string, id: string) => {
+    setLoadingState(id); // Start spinner for this product
     try {
       const res = await sessionAction()
       console.log((res?.user as any)._id)
@@ -107,6 +107,8 @@ const StoreComp = () => {
       countCarts()
     } catch (error) {
       console.error('Failed to add to cart:', error)
+    } finally {
+      setLoadingState(null); // Stop spinner
     }
   }
 
@@ -116,92 +118,7 @@ const StoreComp = () => {
 
   return (
     <>
-      {/* <div className='w-full flex flex-col mt-10 justify-evenly gap-16 overflow-y-scroll items-center flex-wrap min-h-[100vh] p-2'>
-        <div className='w-full flex mt-10 justify-evenly gap-16 items-center flex-wrap h-full p-2'>
-          {loading ? (
-            <StoreLoading />
-          ) : searchItem.length > 0 ? (
-            searchItem.map((product) => (
-              <React.Fragment key={product._id}>
-                <ToastContainer className="z-50 mt-[100px]" />
-                <Card className='m-0 lg:w-[200px]'>
-                  <CardBody>
-                    <Image
-                      src={product.fileURL}
-                      alt={product.productName}
-                      width={500}
-                      height={500}
-                    />
-                    <Stack mt='6' spacing='3'>
-                      <Heading size='md'>{product.productName}</Heading>
-                      <details>
-                        <summary>Description of Product</summary>
-                        <Text>{product.productDescription}</Text>
-                      </details>
-                      <Text color='green.600' fontSize='2xl'>
-                        RS-{product.productPrice}
-                      </Text>
-                    </Stack>
-                  </CardBody>
-                  <Divider />
-                  <CardFooter>
-                    <ButtonGroup className='lg:flex lg:flex-col' spacing='2'>
-                      <Link href={`/store/${product.productCategory}/${product._id}`}>
-                        <Button variant='solid' colorScheme='green'>
-                          <span className='lg:text-sm'>Product Details</span>
-                        </Button>
-                      </Link>
-                      <Button onClick={() => addToCart(product.productCategory, product._id)} variant='ghost' colorScheme='green'>
-                        <span className='lg:text-sm'>Add to cart</span>
-                      </Button>
-                    </ButtonGroup>
-                  </CardFooter>
-                </Card>
-              </React.Fragment>
-            ))
-          ) : (
-            filteredProducts.map((product : any) => (
-              <div key={product._id}>
-                <ToastContainer className="z-50 mt-[100px]" />
-                <Card className='m-0 lg:w-[200px]'>
-                  <CardBody>
-                    <Image
-                      src={product.fileURL}
-                      alt={product.productName}
-                      width={500}
-                      height={500}
-                    />
-                    <Stack mt='6' spacing='3'>
-                      <p className='lg:text-sm font-semibold'>{product.productName}</p>
-                      <details>
-                        <summary className='lg:text-sm font-semibold'>Description of Product</summary>
-                        <p className='lg:text-sm font-semibold'>{product.productDescription}</p>
-                      </details>
-                      <Text color='green.600' fontSize='2xl'>
-                        RS-{product.productPrice}
-                      </Text>
-                    </Stack>
-                  </CardBody>
-                  <Divider />
-                  <CardFooter>
-                    <ButtonGroup className='lg:flex lg:flex-col' spacing='4'>
-                      <Link href={`/store/${product.productCategory}/${product._id}`}>
-                        <Button variant='solid' colorScheme='green'>
-                          <span className='lg:text-sm'>Product Details</span>
-                        </Button>
-                      </Link>
-                      <Button onClick={() => addToCart(product.productCategory, product._id)} variant='ghost' colorScheme='green'>
-                        <span className='lg:text-sm'>Add to cart</span>
-                      </Button>
-                    </ButtonGroup>
-                  </CardFooter>
-                </Card>
-              </div>
-            ))
-          )}
-        </div>
-      </div> */}
-        <div className='w-full flex flex-col mt-10 justify-evenly gap-16 overflow-y-scroll items-center flex-wrap min-h-[100vh] p-2'>
+      <div className='w-full flex flex-col mt-10 justify-evenly gap-16 overflow-y-scroll items-center flex-wrap min-h-[100vh] p-2'>
         <div className='w-full flex mt-10 justify-evenly gap-16 items-center flex-wrap h-full p-2'>
           {loading ? (
             <StoreLoading />
@@ -233,8 +150,16 @@ const StoreComp = () => {
                         <span className='text-sm'>Product Details</span>
                       </button>
                     </Link>
-                    <button onClick={() => addToCart(product.productCategory, product._id)} className='bg-transparent text-green-500 border border-green-500 py-2 px-4 rounded'>
-                      <span className='text-sm'>Add to cart</span>
+                    <button
+                      onClick={() => addToCart(product.productCategory, product._id)}
+                      className='bg-transparent text-green-500 border border-green-500 py-2 px-4 rounded'
+                      disabled={loadingState === product._id}
+                    >
+                      {loadingState === product._id ? (
+                        <CircularProgress isIndeterminate size='20px' color='green.500' />
+                      ) : (
+                        <span className='text-sm'>Add to cart</span>
+                      )}
                     </button>
                   </div>
                 </div>
@@ -268,8 +193,16 @@ const StoreComp = () => {
                         <span className='text-sm'>Product Details</span>
                       </button>
                     </Link>
-                    <button onClick={() => addToCart(product.productCategory, product._id)} className='bg-transparent text-green-500 border border-green-500 py-2 px-4 rounded'>
-                      <span className='text-sm'>Add to cart</span>
+                    <button
+                      onClick={() => addToCart(product.productCategory, product._id)}
+                      className='bg-transparent text-green-500 border border-green-500 py-2 px-4 rounded'
+                      disabled={loadingState === product._id}
+                    >
+                      {loadingState === product._id ? (
+                        <CircularProgress isIndeterminate size='20px' color='green.500' />
+                      ) : (
+                        <span className='text-sm'>Add to cart</span>
+                      )}
                     </button>
                   </div>
                 </div>
@@ -278,7 +211,6 @@ const StoreComp = () => {
           )}
         </div>
       </div>
-
     </>
   )
 }

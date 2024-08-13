@@ -3,8 +3,9 @@ import CredentialsProvider from "next-auth/providers/credentials"
 // import User from "./lib/modals/user";
 import { signInSchema } from "./lib/zod";
 // import { orderByChild } from "firebase/database";
-import bycrpt from "bcryptjs";
+
 import getUserByEmailAction from "./actions/getUserByEmailAction";
+import GoogleProvider from "next-auth/providers/google";
 interface User {
   _id: string;
   email: string;
@@ -60,6 +61,10 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           return { error: "An error occurred during authorization"};
       }
     }
+    }),
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET,

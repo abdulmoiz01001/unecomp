@@ -47,19 +47,7 @@ const adminDashboardAction = async () => {
 
     console.log('All Orders Data:', allOrdersData);
 
-    const todayNotification = await fetch(`${process.env.NEXTAUTH_URL}/api/notifications?today=today`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-    }
-    );
 
-    console.log('Today Notification:', todayNotification);
-
-    const todayNotificationData = await todayNotification.json();
-
-    console.log('Today Notification Data:', todayNotificationData);
 
 
 
@@ -76,7 +64,7 @@ const adminDashboardAction = async () => {
       totalOrdersPrice: sumOfAllTotalPrices,
       totalOrders: data.length,
       activeUsers: usersData,
-      todayNotification: todayNotificationData
+   
       // allOrders: allOrdersData
     }
 

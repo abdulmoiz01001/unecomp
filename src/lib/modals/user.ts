@@ -1,4 +1,4 @@
-import {Schema , models, model} from 'mongoose';
+import { Schema, models, model } from 'mongoose';
 
 const UserSchema = new Schema({
     name: {
@@ -17,23 +17,28 @@ const UserSchema = new Schema({
         type: String,
         required: true,
     },
-    token:{
+    token: {
         type: String,
         required: false,
         default: '',
     },
-    verified:{
+    resetPasswordToken: {
+        type: String,
+        required: false,
+        default: '',
+    },
+    verified: {
         type: Boolean,
         default: false,
         required: false,
     },
-    role:{
+    role: {
         type: String,
         required: false,
         default: 'user',
     }
 
-    
+
 });
 
 const User = models.User || model('User', UserSchema);

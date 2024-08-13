@@ -61,6 +61,7 @@ const HeaderComp = ({ handleClick }: { handleClick: () => void }) => {
     try {
       const session = await sessionAction();
       if (!session) return;
+      console.log(session);
       setSession(session);
     } catch (err) {
       console.log(err);
@@ -71,7 +72,7 @@ const HeaderComp = ({ handleClick }: { handleClick: () => void }) => {
 
   useEffect(() => {
     fetchSession();
-  }, [fetchSession]);
+  }, []);
 
   const [ switchToAdmin, setSwitchToAdmin ] = useState<boolean>(false)
 
