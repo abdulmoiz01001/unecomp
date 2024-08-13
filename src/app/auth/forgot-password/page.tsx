@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Forgot Password",
@@ -7,7 +7,9 @@ export const metadata: Metadata = {
 const ForgotPasswordPage = () => {
   return (
   <>
-  <ForgotPassword />
+<Suspense fallback={<div>Loading...</div>}>
+      <ForgotPasswordPage />
+    </Suspense>
   </>
   )
 }
