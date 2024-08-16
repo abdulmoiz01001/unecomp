@@ -146,10 +146,10 @@ const HomeComp = () => {
 
         </section>
 
-        <section className='w-full flex justify-center items-center' >
+        {/* <section className='w-full flex justify-center items-center' > */}
           {/* {isLoading ? <CarouselSkeleton /> : <ProfileCarouselComp />} */}
-          <ProfileCarouselComp />
-        </section>
+          {/* <ProfileCarouselComp /> */}
+        {/* </section> */}
 
         {/* <section className="w-full h-[50vh] xxs:h-full xs:h-full xxs:gap-8 xs:gap-8 flex flex-wrap justify-evenly items-center bg-white p-4 rounded-lg shadow-lg">
           <div className="w-56 lg:w-38 flex flex-col justify-center items-center border-2 border-gray-300 p-4 rounded-lg shadow-md">
@@ -185,7 +185,7 @@ const HomeComp = () => {
               <h1 className='text-6xl lg:text-2xl   xxs:text-2xl sm:text-4xl md:text-2xl xs:text-2xl font-semibold text-white p-4' >Get in Touch</h1>
               <p className='text-lg lg:text-lg xxs:text-sm xs:text-sm sm:text-sm md:text-sm xxs:text-center xs:text-center sm:text-center md:text-center font-semibold text-white p-4' >Have any questions or concerns? Feel free to reach out to us. We're here to help!</p>
             <Link className='w-full flex justify-center items-center' href="/auth/login" > 
-              <button className='text-white w-[40%] lg:text-sm xxs:w-[50%] sm:w-[50%] md:w-[50%] xs:w-[50%] font-bold xxs:text-sm sm:text-sm md:text-lg xs:text-sm text-2xl hover:bg-opacity-55 bg-[#285d31] px-8 py-2 rounded-lg border-2  hover:bg-transparent ' >Get In Touch</button>
+              <button className='text-white w-[60%] lg:text-sm xxs:w-[50%] sm:w-[50%] md:w-[50%] xs:w-[50%] font-bold xxs:text-sm sm:text-sm md:text-lg  xs:text-sm text-2xl hover:bg-opacity-55 bg-[#285d31] px-8 py-2 rounded-lg border-2  hover:bg-transparent ' >Get In Touch</button>
             </Link>
             </div>
             <div className='h-full overflow-hidden xxs:hidden xs:hidden sm:hidden md:hidden w-[20%] rounded-tl-full rounded-bl-full bg-white' >
