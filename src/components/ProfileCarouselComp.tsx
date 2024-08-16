@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import logo from '@/assets/R.jpeg';
 
 // Function to generate random data
-const generateRandomReviews = (count) => {
+const generateRandomReviews = (count : any) => {
   return Array.from({ length: count }, (_, index) => ({
     name: `Person ${index + 1}`,
     review: `“This is a review text for person ${index + 1}.”`,
