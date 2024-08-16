@@ -1,10 +1,11 @@
 "use client"
 import React, { useState } from 'react'
 import { CgProfile } from "react-icons/cg";
-import { Input, InputGroup, InputRightElement, Button, CircularProgress } from '@chakra-ui/react'
+import { Input, InputGroup, InputRightElement, Button, CircularProgress, Divider } from '@chakra-ui/react'
 import Link from 'next/link';
 import loginAction from '@/actions/loginAction';
 import { useRouter } from 'next/navigation';
+import GoogleSigninBtn from './GoogleSigninBtn';
 
 const LoginComp = () => {
     const router = useRouter();
@@ -70,12 +71,17 @@ const LoginComp = () => {
                                 Forgot Password?
                             </Link>
                         </div>
+                        
                         {mail ? <p>{mail}</p> : <p>{error}</p>}
+                        <div className="flex flex-col items-center justify-center  gap-2">
+                        {/* <GoogleSigninBtn /> */}
+                        {/* <Divider orientation='horizontal' /> */}
                         {
                             spinner ? <CircularProgress isIndeterminate color='green.300' /> : <Button type='submit' colorScheme='teal' variant='outline'>
                                 Sign In
                             </Button>
                         }
+                        </div>
                     </form>
                 </div>
             </div>

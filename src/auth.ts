@@ -65,7 +65,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    }),
+    }), 
   ],
   secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
@@ -93,6 +93,11 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         }
       }
       return token;
+    },
+    async redirect({ url }) {
+      const baseUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000'
+      // Redirect to the home page after sign in
+      return baseUrl;
     },
     async session({session, token}) {
       console.log("This is a user obeject in session callback :: " , token);
