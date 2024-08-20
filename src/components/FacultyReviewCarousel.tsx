@@ -10,35 +10,35 @@ const FacultyReviewCarousel = () => {
       image: logo,
     },
     {
-      name: 'John Doe',
-      review: '“Flow transformed my energy use. Efficient, green tech, outstanding service!”',
+      name: 'Jane Smith',
+      review: '“The best decision I ever made! Incredible support and innovative solutions.”',
       image: logo,
     },
     {
-      name: 'John Doe',
-      review: '“Flow transformed my energy use. Efficient, green tech, outstanding service!”',
+      name: 'Alice Johnson',
+      review: '“A true game-changer in energy efficiency. Highly recommend!”',
       image: logo,
     },
     // Add more reviews here
   ];
 
   return (
-    <div className="grid h-[70%] place-content-center font-sans text-lg bg-primary-800 text-center">
-      <div data-speed="fast" data-animated="true">
-        <ul className="scroller__inner m-0 p-0 list-none flex-wrap gap-4">
+    <div className=" w-[80vw] flex justify-center items-center bg-primary-800 text-center overflow-hidden p-4">
+      <div className="w-full max-w-[1200px]">
+        <div className="flex gap-4  overflow-x-auto snap-x snap-mandatory scrollbar-hide">
           {reviews.map((review, index) => (
             <div
               key={index}
-              className=" hover-effect cursor-pointer relative xxs:w-[200px] xxs:h-[300px] w-[350px] lg:w-[250px] lg:h-[250px] h-[500px]"
+              className="flex-shrink-0 mx-auto snap-center hover-effect cursor-pointer relative w-[80%] sm:w-[60%] md:w-[40%] lg:w-[30%] xl:w-[25%] h-[400px] md:h-[400px]"
             >
-              <Image src={review.image} alt={`image-${index}`} className="w-full h-full" width={500} height={500} />
-              <div className="w-full px-2 h-[100px] lg:h-[0px] text-white flex flex-col justify-evenly items-start pl-2 absolute top-[50%] backdrop-blur-xl">
+              <Image src={review.image} alt={`image-${index}`} className="w-full h-full object-cover" />
+              <div className="w-full px-2 h-[100px] lg:h-[150px] text-white flex flex-col justify-evenly items-start pl-2 absolute bottom-0 backdrop-blur-xl">
                 <p className="text-lg font-bold">- {review.name}</p>
                 <p className="text-sm text-justify font-bold">{review.review}</p>
               </div>
             </div>
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );
