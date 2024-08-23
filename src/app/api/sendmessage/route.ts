@@ -39,12 +39,12 @@ export async function POST(req : Request) {
     </div>
     <p class="text-gray-700 mb-4">Please reply to the customer as soon as possible to address their inquiry or concern.</p>
     <h2 class="text-xl font-semibold text-gray-800 mb-2">Need help?</h2>
-    <p class="text-gray-700 mb-4">If you need assistance in responding to this message, feel free to reach out to our support team at <a href="mailto:support@unecomp.com" class="text-blue-500 hover:underline">support@unecomp.com</a>. We're here to help!</p>
+    <p class="text-gray-700 mb-4">If you need assistance in responding to this message, feel free to reach out to our support team at <a href="asadchipa15@gmail.com" class="text-blue-500 hover:underline">asadchipa15@gmail.com</a>. We're here to help!</p>
     <p class="text-gray-700 mb-6">Best regards,<br>The UneComp Team</p>
   </div>
   <div class="text-center text-gray-500 text-sm">
     <p>UneComp Services<br>1234 Innovation Drive, Suite 100<br>Tech City, TC 12345</p>
-    <p><a href="#" class="text-blue-500 hover:underline">Privacy Policy</a> | <a href="#" class="text-blue-500 hover:underline">Terms of Service</a></p>
+    <p><a href="#" class="text-blue-500 hover:underline">Privacy Policy</a> | <a href="" class="text-blue-500 hover:underline">Terms of Service</a></p>
   </div>
 </div>
 `, // html body

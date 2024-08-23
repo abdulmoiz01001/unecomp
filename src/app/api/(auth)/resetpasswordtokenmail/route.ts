@@ -37,7 +37,7 @@ export async function POST(req : Request) {
         </div>
         <p class="text-gray-700 mb-4">If you did not request a password reset, you can safely ignore this email. Your password will not be changed unless you click the link above and create a new one.</p>
         <h2 class="text-xl font-semibold text-gray-800 mb-2">Need Help?</h2>
-        <p class="text-gray-700 mb-4">If you encounter any issues during the password reset process, feel free to contact our support team at <a href="mailto:support@unecomp.com" class="text-blue-500 hover:underline">support@unecomp.com</a>. We're here to help!</p>
+        <p class="text-gray-700 mb-4">If you encounter any issues during the password reset process, feel free to contact our support team at <a href="asadchipa15@gmail.com" class="text-blue-500 hover:underline">asadchipa15@gmail.com</a>. We're here to help!</p>
         <p class="text-gray-700 mb-6">Best regards,<br>The UneComp Team</p>
     </div>
     <div class="text-center text-gray-500 text-sm">

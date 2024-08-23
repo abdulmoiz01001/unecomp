@@ -95,7 +95,7 @@ const HomeComp = () => {
              </div>
         </section>
 
-        <section className='w-[98%] py-8  xs:w-full sm:w-full md:w-full py-8 bg-gray-200 rounded-xl flex flex-col justify-start items-end' >
+        <section className='w-[98%] py-8  xs:w-full sm:w-full md:w-full bg-gray-200 rounded-xl flex flex-col justify-start items-end' >
 
           <div className='w-[90%] h-[10%] xxs:h-[5%] sm:h-[5%] md:h-[5%] xs:h-[5%] flex justify-start items-center ' >
             <div className='w-[10px] h-[10px] bg-green-800 rounded-full' ></div> <p className='text-xl lg:text-lg xxs:text-sm font-semibold ml-2 text-gray-700 xxs:p-0 p-4' >Our Services & benefits</p>
@@ -107,7 +107,7 @@ const HomeComp = () => {
             <div className='w-[49%] xxs:w-full sm:w-full md:w-full xs:w-full flex flex-col justify-evenly xxs:items-start sm:items-start md:items-start  items-center' >
               <TbTruckDelivery size={50} />
               <h1 className='text-4xl lg:text-lg xxs:text-xl sm:text-xl md:text-xl xs:text-xl font-semibold text-gray-700 p-4' >Fast Delivery</h1>
-              <p className='text-lg lg:text-sm xxs:text-sm font-semibold text-gray-700 p-4' >We deliver your products within 24 hours of ordering.</p>
+              <p className='text-lg lg:text-sm xxs:text-sm font-semibold text-gray-700 p-4' >We deliver your products within 2-3 days of ordering.</p>
 
             </div>
             <div className='w-[49%] xxs:w-full sm:w-full md:w-full xs:w-full flex flex-col justify-evenly xxs:items-start sm:items-start md:items-start  items-center' >
@@ -312,26 +312,26 @@ const HomeComp = () => {
               </Link>
               {/* <p className="text-lg lg:text-sm xxs:text-sm xs:text-sm font-semibold text-gray-700 p-2 transition-transform duration-300 cursor-pointer hover:scale-105">Contact</p> */}
             </div>
-            <div className="w-[30%] xs:w-[70%] xxs:w-full xs:w-full sm:w-full md:w-full xxs:h-44   flex flex-col justify-start items-center">
+            <div className="w-[30%] xxs:w-full xs:w-full sm:w-full md:w-full xxs:h-44   flex flex-col justify-start items-center">
               <h1 className="text-4xl lg:text-xl xs:text-2xl sm:text-2xl md:text-2xl xxs:text-2xl font-semibold text-gray-700 select-none p-4">Contact Support</h1>
               <p className="text-lg lg:text-sm xxs:text-sm xs:text-sm font-semibold text-gray-700 p-2 transition-transform duration-300 cursor-pointer hover:scale-105">Number</p>
               <p className="text-lg lg:text-sm xxs:text-sm xs:text-sm font-semibold text-gray-700 p-2 transition-transform duration-300 cursor-pointer hover:scale-105">Email</p>
               <p className="text-lg lg:text-sm xxs:text-sm xs:text-sm font-semibold text-gray-700 p-2 transition-transform duration-300 cursor-pointer hover:scale-105">Whatsapp number</p>
             </div>
             <div className="w-[20%] xxs:w-full xs:w-full sm:w-full md:w-full flex flex-col justify-start items-center">
-             <Link href={"/"} >
+             <Link target='_blank' href={"/"} >
               <div className="w-full flex justify-around items-center p-4 lg:p-3 flex-wrap transition-transform duration-300 hover:scale-105">
                 <FaFacebookF  className=" w-[50px] lg:w-[20px] lg:h-[20px] h-[50px] text-blue-600" />
                 <p className="text-lg lg:text-sm font-semibold text-gray-700 p-4 lg:p-3">Follow us on Facebook</p>
               </div>
              </Link>
-             <Link href={"/"} >
+             <Link target='_blank' href={"https://www.instagram.com/unec0mp?igsh=MXZnMXIxdWR2YjNrMA=="} >
               <div className="w-full flex justify-around items-center p-4 lg:p-3 flex-wrap transition-transform duration-300 hover:scale-105">
                 <SiInstagram  className=" w-[50px] lg:w-[20px] lg:h-[20px] h-[50px] text-pink-500" />
                 <p className="text-lg lg:text-sm font-semibold text-gray-700 p-4 lg:p-3">Follow us on Instagram</p>
               </div>
              </Link>
-             <Link href={"/"} >
+             <Link target='_blank' href={"https://www.linkedin.com/in/unecomp-creative-students-take-creative-decisions-aa7046283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"} >
               <div className="w-full flex justify-around items-center p-4 lg:p-3 flex-wrap transition-transform duration-300 hover:scale-105">
                 <GrLinkedin  className=" w-[50px] lg:w-[20px] lg:h-[20px] h-[50px] text-blue-700" />
                 <p className="text-lg lg:text-sm font-semibold text-gray-700 p-4 lg:p-3">Follow us on LinkedIn</p>
