@@ -1,7 +1,8 @@
+"use server";
 import { generateResetPasswordToken } from "@/lib/token";
 
 const emailResetAction = async (email : string) =>{
-    const res = await fetch(`/api/user?user=${email}`, {
+    const res = await fetch(`${process.env.NEXTAUTH_URL}/api/user?user=${email}`, {
         method: 'GET',
       });
   
@@ -12,7 +13,7 @@ const emailResetAction = async (email : string) =>{
   
       const resetPasswordToken =  await generateResetPasswordToken(email);
 
-      const send = await fetch(`/api/resetpasswordtokenmail`, {
+      const send = await fetch(`${process.env.NEXTAUTH_URL}/api/resetpasswordtokenmail`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
