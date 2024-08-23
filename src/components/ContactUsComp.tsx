@@ -113,14 +113,12 @@ const ContactUsComp = () => {
             </p>
             <p className="text-gray-600 mb-4">You can also reach us at:</p>
             <p className="text-gray-600 mb-4">
-              <strong>Email:</strong> abdulmoizawan@acm.org
+              <strong>Email:</strong> abdulmoizawan@acm.org || asadchipa15@gmail.com
             </p>
             <p className="text-gray-600 mb-4">
-              <strong>Phone:</strong> 0123-456-789
+              <strong>Phone:</strong> +92 331 3645504 || +92 333 8270932
             </p>
-            <p className="text-gray-600">
-              <strong>Address:</strong> 123 Company St, City, Country
-            </p>
+           
           </div>
           <div className="md:w-1/2 md:pl-8 mt-8 md:mt-0">
             <form onSubmit={formik.handleSubmit} className="flex flex-col space-y-4">

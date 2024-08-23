@@ -15,25 +15,22 @@ const TermsAndConditionsComp = () => {
       answer: 'These terms and conditions outline the rules and regulations for the use of UneComp’s Website. By accessing this website we assume you accept these terms and conditions in full. Do not continue to use UneComp’s website if you do not accept all of the terms and conditions stated on this page.'
     },
     {
-      question: 'License',
-      answer: 'Unless otherwise stated, UneComp and/or its licensors own the intellectual property rights for all material on UneComp. All intellectual property rights are reserved. You may view and/or print pages from http://unecomp.com for your own personal use subject to restrictions set in these terms and conditions.'
+      question: 'Delivery Terms',
+      answer: 'Delivery is typically completed within 2-3 working days. However, please note that delays may occur due to unforeseen circumstances, and we will keep you informed of any changes. A fixed delivery charge of RS-200 applies, regardless of the quantity of products purchased.'
     },
     {
-      question: 'User Comments',
-      answer: 'Certain parts of this website offer the opportunity for users to post and exchange opinions, information, material and data (\'Comments\'). UneComp does not screen, edit, publish or review Comments prior to their appearance on the website and Comments do not reflect the views or opinions of UneComp, its agents or affiliates.'
+      question: 'Face to Face Checking Terms',
+      answer: 'Our terms are strictly face-to-face transactions. We provide a warranty only for products that arrive damaged. We do not offer any warranty for internal issues or after the transaction has been completed. Once the deal is finalized, we are not responsible for any product concerns'
     },
     {
-      question: 'Hyperlinking to our Content',
-      answer: 'The following organizations may link to our Web site without prior written approval: Government agencies, Search engines, News organizations, Online directory distributors when they list us in the directory may link to our Web site in the same manner as they hyperlink to the Web sites of other listed businesses; and Systemwide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site.'
+      question: 'Returns and Refunds',
+      answer: 'Returns and refunds are only accepted within 3 days of receipt for unused products with the original seal intact; otherwise, no returns, replacements, or refunds will be granted.'
     },
     {
-      question: 'iFrames',
-      answer: 'Without prior approval and express written permission, you may not create frames around our Web pages or use other techniques that alter in any way the visual presentation or appearance of our Web site.'
+      question: 'Variation of Price',
+      answer: 'Please note that prices are subject to change based on fluctuations in the main stock market; any increases will be reflected accordingly.'
     },
-    {
-      question: 'Content Liability',
-      answer: 'We shall have no responsibility or liability for any content appearing on your Web site. You agree to indemnify and defend us against all claims arising out of or based upon your Website. No link(s) may appear on any page on your Web site or within any context containing content or materials that may be interpreted as libelous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.'
-    }
+   
   ];
 
   return (

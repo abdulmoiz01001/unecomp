@@ -141,7 +141,9 @@ const HomeComp = () => {
 
           <div className='w-[50%] xxs:w-full xs:w-full sm:w-full md:w-full gap-4 flex flex-col justify-center items-start xxs:items-center sm:items-center md:items-center ' >
             <p className='text-lg lg:text-sm xxs:text-sm xs:text-sm sm:text-lg md:text-lg font-semibold text-justify text-gray-700 p-4' >Welcome to UneComp, your premier online store for high-quality electronic components delivered to your doorstep. We specialize in meeting the diverse needs of students and customers with curated products sourced from trusted local manufacturers. Founded with a commitment to supporting educational and project needs, UneComp offers hassle-free shopping, competitive pricing, and prompt delivery. Join us and empower your projects with UneComp — where local convenience meets top-quality service. </p>
+           <Link href="/about" >
             <button className='text-white font-bold text-2xl lg:text-sm xxs:text-sm sm:text-sm md:text-lg xs:text-sm hover:bg-opacity-55 bg-[#285d31] px-8 py-2 rounded-lg border-2 hover:border-[#285d31] hover:bg-transparent hover:text-[#285d31]' >Learn More</button>
+           </Link>
           </div>
 
         </section>
@@ -233,7 +235,7 @@ const HomeComp = () => {
     },
     {
       question: 'How can I contact support?',
-      answer: 'For any assistance or queries, our dedicated support team is available via email at support@unecomp.com or through our contact form on the website. We strive to provide timely and helpful responses to all inquiries.'
+      answer: 'For any assistance or queries, our dedicated support team is available via email at asadchipa15@gmail.com || abdulmoizawan@acm.org or through our contact form on the website. We strive to provide timely and helpful responses to all inquiries.'
     }
   ].map((item, index) => (
     <div
@@ -266,13 +268,15 @@ const HomeComp = () => {
               Feel free to reach out to us. We're here to help!
             </p>
             <button className="text-white lg:text-sm w-[40%] xxs:w-[80%] sm:text-xl md:text-xl xs:w-[80%] xxs:text-sm xs:text-sm active:scale-95 font-bold text-2xl bg-[#285d31] px-8 py-2 rounded-lg border-2 transition-transform">
+          <Link href="/contact" >
               Contact Us
+          </Link>
             </button>
           </div>
         </section>
 
         <section className='w-full py-8 xxs:py-4 sm:py-4 md:py-4 xs:py-4 flex flex-col justify-center items-center' >
-          <h1 className='text-6xl lg:text-4xl xxs:text-2xl sm:text-4xl md:text-4xl xs:text-2xl sm:text-4xl md:text-4xl xxs:text-center sm:text-center md:text-center xs:text-center font-semibold text-gray-700 p-4' >What our customers say</h1>
+          <h1 className='text-6xl lg:text-4xl xxs:text-2xl sm:text-4xl md:text-4xl xs:text-2xl xxs:text-center sm:text-center md:text-center xs:text-center font-semibold text-gray-700 p-4' >What our customers say</h1>
           <p className='text-lg lg:text-sm w-[50%] xxs:w-[90%] sm:w-[90%] md:w-[90%] text-justify xxs:text-sm xs:text-sm xxs:text-center xs:text-center font-semibold text-gray-700 p-4' >At UneComp, we empower innovation with our premium selection of electronic components. Trusted by professionals and students alike, our commitment to quality ensures that every purchase meets your highest standards for reliability and performance..</p>
           <CarouselComp />
         </section>

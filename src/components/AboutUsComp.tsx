@@ -88,11 +88,13 @@ const AboutUsComp = () => {
             About Us
           </h1>
           <p className="text-gray-600 mb-6">
-            Welcome to our company. We are dedicated to providing the best service possible. Our team is composed of highly skilled professionals who are passionate about what they do. We believe in innovation, quality, and customer satisfaction. Our mission is to deliver exceptional value to our customers through our products and services.
-          </p>
+          Welcome to our online store! We specialize in providing high-quality electronic components tailored specifically for university students at MUET. Our team is composed of passionate and skilled professionals who are dedicated to offering the best service possible.
+
+</p>
           <p className="text-gray-600">
-            Founded in 2024, we have quickly established ourselves as a leader in the industry. Our commitment to excellence has driven us to continuously improve and adapt to the changing needs of our customers. Thank you for choosing us, and we look forward to serving you.
-          </p>
+          Founded in 2024, we have quickly become a trusted resource for students seeking reliable components for their projects. We believe in innovation, quality, and customer satisfaction, and our mission is to deliver exceptional value through our products and services.
+
+Thank you for choosing us to support your academic journey. We look forward to serving you and helping you achieve success in your studies and projects.   </p>
         </div>
       </div>
     </div>

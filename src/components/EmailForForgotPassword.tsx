@@ -1,36 +1,34 @@
 "use client";
 import React, { useState } from 'react';
-import { Box, Button, Container, Heading, Input, VStack, Text } from '@chakra-ui/react';
+import { Box, Button, Container, Heading, Input, VStack, Text, Spinner } from '@chakra-ui/react';
 import { useRouter } from 'next/navigation';
-import { generateResetPasswordToken } from '@/lib/token';
 import emailResetAction from '@/actions/emailResetAction';
+
 const EmailForForgotPassword = () => {
-    const router = useRouter();
+  const router = useRouter();
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false); // Loader state
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setMessage('');
+    setLoading(true); // Show loader
 
-    // Simulate an API call to send reset email
-    try{
+    try {
+      const action: any = await emailResetAction(email);
 
-      const action : any = await emailResetAction(email);
-
-      if(action.error){
+      if (action.error) {
         setMessage(action.error);
-        return;
-      }
-      if(action.success){
-
+      } else if (action.success) {
         setMessage(action.success);
       }
-
-    } catch(e){
+    } catch (e) {
       console.log(e);
+      setMessage('An unexpected error occurred.');
+    } finally {
+      setLoading(false); // Hide loader
     }
-
   };
 
   return (
@@ -60,8 +58,14 @@ const EmailForForgotPassword = () => {
               isRequired
               mb={4}
             />
-            <Button type="submit" colorScheme="teal" size="lg" width="full">
-              Send Reset Link
+            <Button
+              type="submit"
+              colorScheme="teal"
+              size="lg"
+              width="full"
+              isDisabled={loading} // Disable button while loading
+            >
+              {loading ? <Spinner size="sm" /> : 'Send Reset Link'} {/* Show loader in the button */}
             </Button>
           </form>
           {message && (
