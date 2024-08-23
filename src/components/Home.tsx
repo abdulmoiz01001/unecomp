@@ -43,7 +43,7 @@ const HomeComp = () => {
 
       <section className='flex w-[100vw] flex-col justify-center items-center' >
         <main className='w-[100%] py-8  flex xs:flex-col xxs:flex-col  sm:flex-col md:flex-col justify-end xxs:justify-center xs:justify-center sm:justify-center md:justify-center gap-40 xxs:gap-2 xs:gap-2 items-center ' >
-          <section className='w-[45%] lg:ml-4 xxs:mt-10 xxs:w-full xs:w-full sm:w-[95%] md:w-[95%] sm:pl-0 md:pl-0  xxs:h-[60%] xs:h-[60%] sm:h-[60%] md:h-[60%] pl-4 flex flex-col gap-8 justify-center items-start' >
+          <section className='w-[45%] lg:ml-4 xxs:mt-10 xxs:w-full xs:w-full sm:w-[95%] md:w-[95%] sm:pl-0 md:pl-0  xxs:h-[60%] xs:h-[60%] sm:h-[60%] md:h-[60%] xxs:pl-1 xs:pl-1 pl-4 flex flex-col gap-8 justify-center items-start' >
             <div className='w-full  flex justify-start items-center  ' >
               <p className='text-sm font-semibold' >Une Comp</p>
             </div>
@@ -65,8 +65,8 @@ const HomeComp = () => {
           </Link>
             </div>
           </section>
-          <section className='w-[40%]  relative xxs:w-full xs:w-full sm:w-full md:w-full h-full xss:h-[60%] sm:h-[60%] md:h-[60%] flex justify-center items-center' >
-            <div className="absolute -left-40 xxs:left-2 xs:left-2 sm:left-16 sm:left-20  bg-white lg:w-[500px] w-[600px] xxs:w-[340px] xxxs:h-[120px] xs:w-[340px] rounded-lg shadow-3 p-6">
+          <section className='w-[40%]   relative xxs:w-full xs:w-full sm:w-full md:w-full h-full xxs:h-[60%] sm:h-[60%] md:h-[60%] flex justify-center items-center' >
+            <div className="absolute  -left-40 xxs:left-2 xs:left-10 sm:left-20 md:left-20 bg-white lg:w-[500px] w-[600px] xxs:w-[90%]  xs:w-[340px] rounded-lg shadow-3 xs:p-2 p-6">
               <div className="flex justify-start  items-center gap-8 xxs:mb-0 mb-4">
                 <Image src={diode} alt="" width={500} height={500} className="w-[120px] h-[120px] xxs:w-[60px] xxs:h-[60px] object-cover rounded-full shadow-md" />
                 <p className="text-xl xxs:text-sm xs:text-sm lg:text-lg font-semibold text-gray-800">Wide Range of Components</p>
@@ -286,8 +286,8 @@ const HomeComp = () => {
     </section> */}
 
         <footer className="w-[100vw]  flex flex-col justify-between xxs:justify-between sm:justify-between md:justify-between items-center bg-gray-100">
-          <div className="w-full  flex xxs:flex-col xs:flex-col sm:flex-col md:flex-col justify-evenly items-start  p-8">
-            <div className="w-[20%] xxs:w-full xs:w-full sm:w-full md:w-full xxs:h-40 xs:h-80 h-[80%] flex flex-col justify-start items-center">
+          <div className="w-full   flex xxs:flex-col xs:flex-col sm:flex-col md:flex-col justify-evenly items-start  p-8">
+            <div className="w-[20%]  xxs:w-full xs:w-full sm:w-full md:w-full xxs:h-40  xs:h-40 h-[80%] flex flex-col justify-start items-center">
               <h1 className="text-4xl lg:text-2xl xxs:text-4xl sm:text-4xl md:text-4xl xs:text-4xl font-semibold text-gray-700 select-none p-4">Une Comp</h1>
             </div>
             <div className="w-[20%] xxs:w-full xs:w-full sm:w-full md:w-full xxs:h-40 xs:h-80 h-[80%] flex flex-col justify-start items-center">
@@ -296,7 +296,7 @@ const HomeComp = () => {
               <p className="text-lg lg:text-sm xxs:text-sm sm:text-lg md:text-lg font-semibold text-gray-700 p-2 transition-transform duration-300 cursor-pointer hover:scale-105">Project related Products</p>
               <p className="text-lg lg:text-sm xxs:text-sm sm:text-lg md:text-lg font-semibold text-gray-700 p-2 transition-transform duration-300 cursor-pointer hover:scale-105">Project Deals</p>
             </div>
-            <div className="w-[20%] xxs:w-full xs:w-full xxs:h-48 xs:h-48 h-[80%] flex flex-col justify-start items-center">
+            <div className="w-[20%] xxs:w-full  xs:w-full sm:w-full md:w-full xxs:h-48 xs:h-48 h-[80%] flex flex-col justify-start items-center">
               <h1 className="text-4xl lg:text-xl xxs:text-2xl sm:text-2xl md:text-2xl xs:text-2xl font-semibold text-gray-700 select-none p-4">Company</h1>
               <Link href={"/about"} >
               <p className="text-lg lg:text-sm xxs:text-sm  xs:text-sm sm:text-lg md:text-lg font-semibold text-gray-700 p-2 transition-transform duration-300 cursor-pointer hover:scale-105">About</p>
@@ -312,13 +312,13 @@ const HomeComp = () => {
               </Link>
               {/* <p className="text-lg lg:text-sm xxs:text-sm xs:text-sm font-semibold text-gray-700 p-2 transition-transform duration-300 cursor-pointer hover:scale-105">Contact</p> */}
             </div>
-            <div className="w-[30%] xxs:w-full xs:w-full sm:w-full md:w-full xxs:h-44   flex flex-col justify-start items-center">
+            <div className="w-[30%]  xxs:w-full xs:w-full sm:w-full md:w-full xxs:h-44   flex flex-col justify-start items-center">
               <h1 className="text-4xl lg:text-xl xs:text-2xl sm:text-2xl md:text-2xl xxs:text-2xl font-semibold text-gray-700 select-none p-4">Contact Support</h1>
               <p className="text-lg lg:text-sm xxs:text-sm xs:text-sm font-semibold text-gray-700 p-2 transition-transform duration-300 cursor-pointer hover:scale-105">Number</p>
               <p className="text-lg lg:text-sm xxs:text-sm xs:text-sm font-semibold text-gray-700 p-2 transition-transform duration-300 cursor-pointer hover:scale-105">Email</p>
               <p className="text-lg lg:text-sm xxs:text-sm xs:text-sm font-semibold text-gray-700 p-2 transition-transform duration-300 cursor-pointer hover:scale-105">Whatsapp number</p>
             </div>
-            <div className="w-[20%] xxs:w-full xs:w-full sm:w-full md:w-full flex flex-col justify-start items-center">
+            <div className="w-[20%]  xxs:w-full xs:w-full sm:w-full md:w-full flex flex-col justify-start items-center">
              <Link target='_blank' href={"/"} >
               <div className="w-full flex justify-around items-center p-4 lg:p-3 flex-wrap transition-transform duration-300 hover:scale-105">
                 <FaFacebookF  className=" w-[50px] lg:w-[20px] lg:h-[20px] h-[50px] text-blue-600" />
@@ -339,7 +339,7 @@ const HomeComp = () => {
              </Link>
             </div>
           </div>
-          <div className="w-full h-[20%]  flex xxs:justify-center xs:justify-center justify-end items-center bg-gray-200 p-4">
+          <div className="w-full  h-[20%]  flex xxs:justify-center xs:justify-center justify-end items-center bg-gray-200 p-4">
             <p className="text-lg lg:text-sm xxs:text-sm xs:text-sm xxs:text-center xs:text-center font-semibold text-gray-700">© 2024 UneComp. All rights reserved.</p>
           </div>
         </footer>

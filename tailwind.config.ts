@@ -27,7 +27,7 @@ const config: Config = {
     
     extend: {
       screens: {
-        'xs': {'min': '400px', 'max': '639px'},
+        'xs': {'min': '399px', 'max': '639px'},
         'xxs': {'max': '399px'},
         // => @media (min-width: 992px) { ... }
       },

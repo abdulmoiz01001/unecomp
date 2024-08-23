@@ -149,7 +149,7 @@ const HeaderComp = ({ handleClick }: { handleClick: () => void }) => {
                 session?.user?.role === 'admin' &&  <Switch onChange={()=>setSwitchToAdmin(!switchToAdmin)} mr="4" colorScheme='teal' size='lg' />
               }
             {
-              pathname != '/' && <><Box  position="relative">
+             session && pathname != '/' && <><Box  position="relative">
               <Link href="/addtocart">
                 <IconButton aria-label="Cart" icon={<IoMdCart size={40} />} colorScheme="green" />
               </Link>
