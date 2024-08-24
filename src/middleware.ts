@@ -1,7 +1,7 @@
 
 let adminRoutes = ['/dashboard' , '/products' , '/userorders' , '/users' ]
 
-let authRoutes = [ '/login' , '/signup']
+// let authRoutes = [ '/login' , '/signup']
 
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
@@ -30,10 +30,10 @@ export async function middleware(request: NextRequest) {
     if (!isPublicPath && !token) {
         return NextResponse.redirect(new URL('/auth/login', request.url))
     }
-   console.log('Auth Routes:', authRoutes)
-    if (token && authRoutes.includes(pathname)) {
-        return NextResponse.redirect(new URL('/', request.url));
-      }
+//    console.log('Auth Routes:', authRoutes)
+//     if (token && authRoutes.includes(pathname)) {
+//         return NextResponse.redirect(new URL('/', request.url));
+//       }
     
 
 

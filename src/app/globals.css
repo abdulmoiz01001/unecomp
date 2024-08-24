@@ -208,6 +208,10 @@ body {
   background-color: var(--clr-primary-800);
 }
 
+.shad {
+  filter: drop-shadow(1px  1px  20px  green);
+}
+
 .tag-list {
   margin: 0;
   padding-inline: 0;

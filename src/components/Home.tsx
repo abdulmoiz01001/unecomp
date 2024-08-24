@@ -13,10 +13,25 @@ import { GrLinkedin } from "react-icons/gr";
 import FacultyReviewCarousel from './FacultyReviewCarousel'
 import Link from 'next/link'
 import { MdOutlinePriceCheck, MdOutlineSupportAgent } from 'react-icons/md'
+import sessionAction from '@/actions/sessionAction';
 import touch from '@/assets/getintouch.jpeg'
 // import { io } from "socket.io-client";
 const HomeComp = () => {
+  const [ session, setSession ] = useState<any>(null)
+   const getSession = async () => {
+    try{
+      const session = await sessionAction()
+      console.log(session)
+      setSession(session)
 
+    }catch(error){
+      console.log(error)
+    }
+   }
+
+  useEffect(()=>{
+   getSession()
+  },[])
   
 //   const socket = useMemo(() => io("http://localhost:4000"), []);
   
@@ -60,9 +75,12 @@ const HomeComp = () => {
           
              <button className='text-white font-bold xxs:text-sm xs:text-sm sm:text-sm md:text-sm   lg:text-sm text-2xl hover:bg-opacity-55 bg-[#285d31] px-8 py-2 rounded-lg border-2 hover:border-[#285d31] hover:bg-transparent hover:text-[#285d31]' >Visit Our Store</button>
           </Link> 
-          <Link href="/auth/login" >
-              <button className=' font-bold xxs:text-sm xs:text-sm text-2xl sm:text-sm md:text-sm lg:text-sm hover:bg-opacity-55 text-[#285d31] border-2 border-[#285d31] hover:bg-slate-200 px-8 py-2 rounded-lg hover:border-2 hover:border-[#285d31] hover:bg-transparent hover:text-[#285d31]' >Get in Touch</button>
-          </Link>
+          {
+           !session &&    <Link href="/auth/login" >
+           <button className=' font-bold xxs:text-sm xs:text-sm text-2xl sm:text-sm md:text-sm lg:text-sm hover:bg-opacity-55 text-[#285d31] border-2 border-[#285d31] hover:bg-slate-200 px-8 py-2 rounded-lg hover:border-2 hover:border-[#285d31] hover:bg-transparent hover:text-[#285d31]' >Get in Touch</button>
+       </Link>
+          }
+         
             </div>
           </section>
           <section className='w-[40%]   relative xxs:w-full xs:w-full sm:w-full md:w-full h-full xxs:h-[60%] sm:h-[60%] md:h-[60%] flex justify-center items-center' >
@@ -186,9 +204,12 @@ const HomeComp = () => {
             <div className='h-full w-[50%] xxs:w-full sm:w-full md:w-full xs:w-full flex flex-col justify-center items-start xxs:items-center sm:items-center md:items-center xs:items-center ' >
               <h1 className='text-6xl lg:text-2xl   xxs:text-2xl sm:text-4xl md:text-2xl xs:text-2xl font-semibold text-white p-4' >Get in Touch</h1>
               <p className='text-lg lg:text-lg xxs:text-sm xs:text-sm sm:text-sm md:text-sm xxs:text-center xs:text-center sm:text-center md:text-center font-semibold text-white p-4' >Have any questions or concerns? Feel free to reach out to us. We're here to help!</p>
-            <Link className='w-full flex justify-center items-center' href="/auth/login" > 
+            {
+              !session && <Link className='w-full flex justify-center items-center' href="/auth/login" > 
               <button className='text-white w-[60%] lg:text-sm xxs:w-[50%] sm:w-[50%] md:w-[50%] xs:w-[50%] font-bold xxs:text-sm sm:text-sm md:text-lg  xs:text-sm text-2xl hover:bg-opacity-55 bg-[#285d31] px-8 py-2 rounded-lg border-2  hover:bg-transparent ' >Get In Touch</button>
             </Link>
+            }
+            
             </div>
             <div className='h-full overflow-hidden xxs:hidden xs:hidden sm:hidden md:hidden w-[20%] rounded-tl-full rounded-bl-full bg-white' >
 <Image    src={touch} alt="ds" width={500} height={500} className=" w-full h-full  object-cover  shadow-md" />     
