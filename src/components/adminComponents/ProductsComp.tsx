@@ -27,7 +27,7 @@ const ProductsComp = () => {
           // get from server side prop
 
     const DEV_API = 'http://localhost:3000'
-    const PROD_API = 'https://unecomp.vercel.app'
+    const PROD_API = 'https://unecomp.site'
 
     const API_URL = process.env.NODE_ENV === 'development' ? DEV_API : PROD_API
 
