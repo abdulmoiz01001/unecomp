@@ -546,7 +546,7 @@ const DeliveryDetailsComp = () => {
         {/* Terms and Conditions */}
     <div className="grid grid-cols-1 mt-10 mb-4 gap-2">
       <label className="text-sm font-medium">Terms and Conditions</label>
-      <p className="text-sm text-gray-500">By placing this order, you agree to our terms and conditions. if not ? <Link className='underline text-blue-800' href="/terms&policies">Read Terms and Conditions</Link> 
+      <p className="text-sm text-gray-500">By placing this order, you agree to our terms and conditions. if not ? <Link className='underline text-blue-800' href="/term&policies">Read Terms and Conditions</Link> 
       </p>
       <div className="flex items-center gap-2">
         <input required 
