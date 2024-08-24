@@ -319,7 +319,7 @@ const HomeComp = () => {
               <p className="text-lg lg:text-sm xxs:text-sm xs:text-sm font-semibold text-gray-700 p-2 transition-transform duration-300 cursor-pointer hover:scale-105">Whatsapp number</p>
             </div>
             <div className="w-[20%]  xxs:w-full xs:w-full sm:w-full md:w-full flex flex-col justify-start items-center">
-             <Link target='_blank' href={"/"} >
+             <Link target='_blank' href={"https://www.facebook.com/unecomp?mibextid=JRoKGi"} >
               <div className="w-full flex justify-around items-center p-4 lg:p-3 flex-wrap transition-transform duration-300 hover:scale-105">
                 <FaFacebookF  className=" w-[50px] lg:w-[20px] lg:h-[20px] h-[50px] text-blue-600" />
                 <p className="text-lg lg:text-sm font-semibold text-gray-700 p-4 lg:p-3">Follow us on Facebook</p>
