@@ -15,23 +15,23 @@ const EmailForForgotPassword = () => {
     setMessage('');
     setLoading(true); // Show loader
 
-    // try {
+    try {
       const action: any = await emailResetAction(email);
       console.log("actions" ,action);
 
       if (action?.error || !action.error !== undefined) {
         setMessage(action.error);
         console.log(action.error);
-      } else {
-        setMessage("Email sent");
+      } else if (action?.success) {
+        setMessage(action.success);
         console.log(action.success);
       }
-    // } catch (e) {
+    } catch (e) {
       console.log(e);
       setMessage('An unexpected error occurred.');
-    // } finally {
+    } finally {
       setLoading(false); // Hide loader
-    // }
+    }
   };
 
   return (
