@@ -26,7 +26,7 @@ export const GET = async (req: Request) => {
             return new NextResponse(JSON.stringify(order), { status: 200 });
         }
         if (!id) {
-            const orders = await Orders.find().sort({ orderDate: 1 });
+            const orders = await Orders.find().sort({ orderDate: 'desc' });
             console.log('Orders:', orders);
             if (!orders) {
                 return new NextResponse(JSON.stringify({ message: 'Orders not found' }), { status: 404 });

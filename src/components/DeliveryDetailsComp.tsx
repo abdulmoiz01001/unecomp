@@ -11,6 +11,7 @@ import orderAction from '@/actions/orderAction';
 import sessionAction from '@/actions/sessionAction';
 import Image from 'next/image';
 import cartOrderAction from '@/actions/cartOrderAction';
+import Link from 'next/link';
 // import io from 'socket.io-client'
 
 const DeliveryDetailsComp = () => {
@@ -64,6 +65,7 @@ const DeliveryDetailsComp = () => {
    const cartedProducts = useAppSelector((state) => state.carts.cartOrders)
    const [parsedProduct, setParsedProduct] = useState<any>([]);
    const [ cartProducts , setCartProducts ] = useState<String[]>([]);
+   const [ userDetailsError , setUserDetailsError ] = useState(null as any)
   //  const [ totalPrice , setTotalPrice ] = useState<number>(0)
 
   //  console.log(cartProducts)
@@ -194,6 +196,14 @@ const DeliveryDetailsComp = () => {
     console.log(parsedProduct);
     console.log(cashOnDelivery)
 
+    if(!userDetails.email) {
+      setUserDetailsError("Please fill the user details");
+      setSpinner(false)
+      return;
+
+    }
+ 
+
     if(parsedProduct.length>0 && parsedProduct){
       try{
 
@@ -266,6 +276,7 @@ const DeliveryDetailsComp = () => {
               color: activeTab === 0 ? 'white' : 'black',
               border: '1px solid #285d31',
             }}
+            onClick={() => setActiveTab(0)}
           >
             User Details
           </Tab>
@@ -275,6 +286,7 @@ const DeliveryDetailsComp = () => {
               color: activeTab === 1 ? 'white' : 'black',
               border: '1px solid #285d31',
             }}
+            onClick={() => setActiveTab(1)}
           >
             Order Details
           </Tab>
@@ -534,7 +546,8 @@ const DeliveryDetailsComp = () => {
         {/* Terms and Conditions */}
     <div className="grid grid-cols-1 mt-10 mb-4 gap-2">
       <label className="text-sm font-medium">Terms and Conditions</label>
-      <p className="text-sm text-gray-500">By placing this order, you agree to our terms and conditions.</p>
+      <p className="text-sm text-gray-500">By placing this order, you agree to our terms and conditions. if not ? <Link className='underline text-blue-800' href="/terms&policies">Read Terms and Conditions</Link> 
+      </p>
       <div className="flex items-center gap-2">
         <input required 
           type="checkbox" 
@@ -547,6 +560,9 @@ const DeliveryDetailsComp = () => {
     </div>
 
     {/* Submit Button */}
+    {
+      userDetailsError != '' && <div className="text-red-500 text-sm font-medium">{userDetailsError}</div>
+    }
     <div className="grid grid-cols-1 gap-2">
    
    {
