@@ -19,7 +19,7 @@ const EmailForForgotPassword = () => {
       const action: any = await emailResetAction(email);
       console.log("actions" ,action);
 
-      if (action?.error || !action.error !== undefined) {
+      if (action?.error && action.error !== undefined) {
         setMessage(action.error);
         console.log(action.error);
       } else if (action?.success) {
