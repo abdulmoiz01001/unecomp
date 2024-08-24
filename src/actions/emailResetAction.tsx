@@ -37,7 +37,7 @@ const emailResetAction = async (email : string) =>{
     return { success: "Email sent"};
   } catch (error) {
     console.error('Failed to send email:', error);
-    return { error: "An unexpected error occurred"};
+    return { error: "An unexpected error occurred in sending email"};
   }
     
 }

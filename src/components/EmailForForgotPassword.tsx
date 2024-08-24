@@ -16,7 +16,7 @@ const EmailForForgotPassword = () => {
     setLoading(true); // Show loader
 
     try {
-      const action: any = await emailResetAction(email);
+      const action : any = await emailResetAction(email);
       console.log("actions" ,action);
 
       if (action?.error || !action.error !== undefined) {
