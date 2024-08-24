@@ -15,7 +15,7 @@ const EmailForForgotPassword = () => {
     setMessage('');
     setLoading(true); // Show loader
 
-    try {
+    // try {
       const action: any = await emailResetAction(email);
       console.log("actions" ,action);
 
@@ -26,12 +26,12 @@ const EmailForForgotPassword = () => {
         setMessage("Email sent");
         console.log(action.success);
       }
-    } catch (e) {
+    // } catch (e) {
       console.log(e);
       setMessage('An unexpected error occurred.');
-    } finally {
+    // } finally {
       setLoading(false); // Hide loader
-    }
+    // }
   };
 
   return (
