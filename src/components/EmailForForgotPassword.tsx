@@ -22,7 +22,7 @@ const EmailForForgotPassword = () => {
       if (action?.error || !action.error !== undefined) {
         setMessage(action.error);
         console.log(action.error);
-      } else if (action?.success) {
+      } else {
         setMessage("Email sent");
         console.log(action.success);
       }
