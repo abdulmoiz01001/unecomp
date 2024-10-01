@@ -145,9 +145,9 @@ const StoreComp = () => {
 
   return (
     <>
-      <div className='w-full flex flex-col mt-10 justify-evenly gap-16 overflow-y-scroll items-center flex-wrap min-h-[100vh] p-2'>
+      <div className='w-full border-2 border-red-900 flex flex-col mt-10 justify-evenly gap-0 overflow-x-hidden  overflow-y-hidden items-center flex-wrap min-h-[100vh] p-2'>
           <ToastContainer className="z-50 mt-[100px]" />
-        <div className='w-full flex mt-10 justify-evenly gap-16 items-center flex-wrap h-full p-2'>
+        <div className='w-full flex mt-10 border-2 border-red-900 justify-evenly gap-16 items-center flex-wrap h-full p-2'>
           {loading ? (
             <StoreLoading />
           ) : searchItem.length > 0 ? (

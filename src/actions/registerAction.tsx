@@ -1,7 +1,6 @@
 "use server"
 import { generateToken } from "@/lib/token"; // Import the generatePasswordResetToken function\
 import bycrpt from "bcryptjs";
-import { error } from "console";
 const registerAction = async (values: any) => {
   try {
     // get user from db by email
