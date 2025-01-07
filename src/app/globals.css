@@ -76,7 +76,7 @@
   background-color: #66bb6a; /* Up arrow button */
 }
 
-::-webkit-scrollbar-button:vertical:increment {
+webpwebkit-scrollbar-button:vertical:increment {
   background-color: #66bb6a; /* Down arrow button */
 }
 
@@ -102,7 +102,7 @@ body {
 
 
 .background-image {
-  background-image: url('../assets/architecture.jpg');
+  background-image: url('../assets/architecture.webp');
   background-size: cover;
   background-position: center;
   /* width: 900px;

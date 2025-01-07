@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import logo from '@/assets/R.jpeg';
+import logo from '@/assets/R.webp';
 
 const FacultyReviewCarousel = () => {
   const reviews = [

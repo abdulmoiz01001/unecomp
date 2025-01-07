@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
-import MissionLogo from '@/assets/mission.jpg';
+import MissionLogo from '@/assets/mission.webp';
 import globalCartCountAction from '@/actions/globalCartCountAction';
 import { cartsCount } from '@/lib/store/features/carts/cartsSlice';
 import { useAppDispatch } from '@/lib/store/hooks';

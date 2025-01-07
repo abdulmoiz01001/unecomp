@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import contactImage from "@/assets/contact.jpeg";
+import contactImage from "@/assets/contact.webp";
 import globalCartCountAction from "@/actions/globalCartCountAction";
 import { cartsCount } from "@/lib/store/features/carts/cartsSlice";
 import contactMessageAction from "@/actions/contactMessageAction";

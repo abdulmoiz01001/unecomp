@@ -1,7 +1,7 @@
 "use client";
 import Image from 'next/image';
 import React, { useEffect } from 'react';
-import logo from '@/assets/R.jpeg';
+import logo from '@/assets/R.webp';
 
 // Function to generate random data
 const generateRandomReviews = (count : any) => {

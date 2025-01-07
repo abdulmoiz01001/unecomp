@@ -1,8 +1,8 @@
 "use client";
 import Image from 'next/image'
 import React, { useEffect, useMemo, useState } from 'react'
-import back from '@/assets/homeBackImage.jpeg'
-import diode from '@/assets/Diode 1N4007.jpg'
+import back from '@/assets/homeBackImage.webp'
+import diode from '@/assets/Diode 1N4007.webp'
 import { TbHandFinger, TbTruckDelivery } from "react-icons/tb";
 import ProfileCarouselComp from './ProfileCarouselComp';
 import { FaRegQuestionCircle } from "react-icons/fa";
@@ -14,7 +14,7 @@ import FacultyReviewCarousel from './FacultyReviewCarousel'
 import Link from 'next/link'
 import { MdOutlinePriceCheck, MdOutlineSupportAgent } from 'react-icons/md'
 import sessionAction from '@/actions/sessionAction';
-import touch from '@/assets/getintouch.jpeg'
+import touch from '@/assets/getintouch.webp'
 // import { io } from "socket.io-client";
 const HomeComp = () => {
   const [ session, setSession ] = useState<any>(null)
@@ -62,13 +62,14 @@ const HomeComp = () => {
             <div className='w-full  flex justify-start items-center  ' >
               <p className='text-sm font-semibold' >Une Comp</p>
             </div>
-            <div className='w-full font-bold xxs:text-2xl xs:text-2xl sm:text-4xl md:text-6xl lg:text-6xl text-8xl flex justify-evenly items-center  ' >
-              <p>Empowering Your Innovations</p>
-            </div>
-            <div className='w-full  flex justify-start items-center  ' >
-              <p className='text-lg xxs:text-sm xs:text-lg sm:text-lg md:text-lg lg:text-sm  font-bold text-justify xxs:p-2 xs:p-2 sm:pr-0 md:pr-0 pr-40' >Welcome to UneComp, your go-to destination for top-quality electronic components and project supplies designed for students. Our mission is to empower future engineers, developers, and innovators with the essential parts they need for their academic projects.
+           <div className="w-full font-bold text-6xl xxs:text-xl xs:text-2xl sm:text-3xl md:text-5xl lg:text-5xl flex justify-evenly items-center scale-[0.9] origin-left">
+  <h1>Buy Electronic Components in Pakistan</h1>
+</div>
 
-                At UneComp, we recognize the challenges students face in sourcing components, which is why we offer a wide selection, competitive prices, and exceptional customer service..</p>
+
+            <div className='w-full  flex justify-start items-center  ' >
+              <p className='text-lg xxs:text-sm xs:text-lg sm:text-lg md:text-lg lg:text-sm  font-bold  xxs:p-2 xs:p-2 sm:pr-0 md:pr-0 pr-40' >
+              UneComp offers a wide range of high-quality electronic components, microelectronic  components ,and printed-circuit components in affordable price .               </p>
             </div>
             <div className='w-full gap-12 xxs:gap-4  xs:gap-4 sm:gap-4 md:gap-4 flex xxs:flex-col xs:flex-col sm:flex-col md:flex-col justify-start items-center  ' >
           <Link href="/store" >
@@ -119,30 +120,30 @@ const HomeComp = () => {
             <div className='w-[10px] h-[10px] bg-green-800 rounded-full' ></div> <p className='text-xl lg:text-lg xxs:text-sm font-semibold ml-2 text-gray-700 xxs:p-0 p-4' >Our Services & benefits</p>
           </div>
           <div className='w-[90%] h-[20%] xxs:h-[5%] sm:h-[10%] md:h-[10%] xs:h-[5%] flex justify-start items-center' >
-            <h1 className='text-6xl lg:text-4xl xxs:text-xl xs:text-xl font-semibold text-gray-700 xxs:p-0 xs:p-0 p-4' >Our Services</h1>
+            <h2 className='text-6xl lg:text-4xl xxs:text-xl xs:text-xl font-semibold text-gray-700 xxs:p-0 xs:p-0 p-4' >Our Services</h2>
           </div>
           <div className='w-[90%] h-[70%] flex justify-start flex-wrap items-center' >
             <div className='w-[49%] xxs:w-full sm:w-full md:w-full xs:w-full flex flex-col justify-evenly xxs:items-start sm:items-start md:items-start  items-center' >
               <TbTruckDelivery size={50} />
-              <h1 className='text-4xl lg:text-lg xxs:text-xl sm:text-xl md:text-xl xs:text-xl font-semibold text-gray-700 p-4' >Fast Delivery</h1>
+              <h2 className='text-4xl lg:text-lg xxs:text-xl sm:text-xl md:text-xl xs:text-xl font-semibold text-gray-700 p-4' >Fast Delivery</h2>
               <p className='text-lg lg:text-sm xxs:text-sm font-semibold text-gray-700 p-4' >We deliver your products within 2-3 days of ordering.</p>
 
             </div>
             <div className='w-[49%] xxs:w-full sm:w-full md:w-full xs:w-full flex flex-col justify-evenly xxs:items-start sm:items-start md:items-start  items-center' >
               <TbHandFinger size={50} />
-              <h1 className='text-4xl lg:text-lg xxs:text-xl sm:text-xl md:text-xl xs:text-xl font-semibold text-gray-700 p-4' >Comprehensive Product Selection</h1>
+              <h2 className='text-4xl lg:text-lg xxs:text-xl sm:text-xl md:text-xl xs:text-xl font-semibold text-gray-700 p-4' >Comprehensive Product Selection</h2>
               <p className='text-lg lg:text-sm xxs:text-sm xs:text-sm font-semibold text-gray-700 p-4' >Explore a diverse range of high-quality electronic components tailored for student projects.</p>
 
             </div>
             <div className='w-[49%] xxs:w-full sm:w-full md:w-full xs:w-full  flex flex-col justify-evenly xxs:items-start sm:items-start md:items-start  items-center' >
               <MdOutlineSupportAgent size={50} />
-              <h1 className='text-4xl lg:text-lg xxs:text-xl sm:text-xl md:text-xl xs:text-xl font-semibold text-gray-700 p-4' >Technical Support</h1>
+              <h2 className='text-4xl lg:text-lg xxs:text-xl sm:text-xl md:text-xl xs:text-xl font-semibold text-gray-700 p-4' >Technical Support</h2>
               <p className='text-lg lg:text-sm xxs:text-sm xs:text-sm font-semibold text-gray-700 p-4' >Access expert advice and technical assistance to ensure your projects are successful.</p>
 
             </div>
             <div className='w-[49%] xxs:w-full sm:w-full md:w-full xs:w-full flex flex-col justify-evenly xxs:items-start sm:items-start md:items-start  items-center' >
               <MdOutlinePriceCheck size={50} />
-              <h1 className='text-4xl lg:text-lg xxs:text-xl sm:text-xl md:text-xl xs:text-xl font-semibold text-gray-700 p-4' >Competitive Pricing</h1>
+              <h2 className='text-4xl lg:text-lg xxs:text-xl sm:text-xl md:text-xl xs:text-xl font-semibold text-gray-700 p-4' >Competitive Pricing</h2>
               <p className='text-lg lg:text-sm xxs:text-sm xs:text-sm font-semibold text-gray-700 p-4' >Enjoy competitive prices on all our products, designed to fit your budget without compromising on quality.</p>
 
             </div>
@@ -153,7 +154,7 @@ const HomeComp = () => {
         <section className='w-[80%] xxs:w-[95%] xs:w-[95%] sm:w-[95%] md:w-[95%] py-10 flex xxs:flex-col  xs:flex-col sm:flex-col md:flex-col justify-between xxs:justify-center sm:justify-center md:justify-center items-center ' >
 
           <div className='w-[50%] h-[300px] xxs:h-[10%] sm:h-[10%] md:h-[10%] xs:h-[10%] flex justify-start xxs:justify-center sm:justify-center md:justify-center xs:justify-center xxs:items-center xs:items-center sm:items-center md:items-center items-start ' >
-            <h1 className='text-6xl lg:text-4xl xxs:text-2xl xs:text-2xl sm:text-4xl med:text-4xl  font-semibold text-gray-700 p-4' >About us</h1>
+            <h2 className='text-6xl lg:text-4xl xxs:text-2xl xs:text-2xl sm:text-4xl med:text-4xl  font-semibold text-gray-700 p-4' >About us</h2>
 
           </div>
 
@@ -173,19 +174,19 @@ const HomeComp = () => {
 
         {/* <section className="w-full h-[50vh] xxs:h-full xs:h-full xxs:gap-8 xs:gap-8 flex flex-wrap justify-evenly items-center bg-white p-4 rounded-lg shadow-lg">
           <div className="w-56 lg:w-38 flex flex-col justify-center items-center border-2 border-gray-300 p-4 rounded-lg shadow-md">
-            <h1 className="text-2xl lg:text-lg font-bold text-gray-800 mb-2">5,000 + M</h1>
+            <h2 className="text-2xl lg:text-lg font-bold text-gray-800 mb-2">5,000 + M</h2>
             <p className="text-center lg:text-sm text-gray-600">Renewable Energy Generated</p>
           </div>
           <div className="w-56 lg:w-38 flex flex-col justify-center items-center border-2 border-gray-300 p-4 rounded-lg shadow-md">
-            <h1 className="text-2xl lg:text-lg font-bold text-gray-800 mb-2">5,000 + M</h1>
+            <h2 className="text-2xl lg:text-lg font-bold text-gray-800 mb-2">5,000 + M</h2>
             <p className="text-center lg:text-sm text-gray-600">Renewable Energy Generated</p>
           </div>
           <div className="w-56 lg:w-38 flex flex-col justify-center items-center border-2 border-gray-300 p-4 rounded-lg shadow-md">
-            <h1 className="text-2xl lg:text-lg font-bold text-gray-800 mb-2">5,000 + M</h1>
+            <h2 className="text-2xl lg:text-lg font-bold text-gray-800 mb-2">5,000 + M</h2>
             <p className="text-center lg:text-sm text-gray-600">Renewable Energy Generated</p>
           </div>
           <div className="w-56 lg:w-38 flex flex-col justify-center items-center border-2 border-gray-300 p-4 rounded-lg shadow-md">
-            <h1 className="text-2xl lg:text-lg font-bold text-gray-800 mb-2">5,000 + M</h1>
+            <h2 className="text-2xl lg:text-lg font-bold text-gray-800 mb-2">5,000 + M</h2>
             <p className="text-center lg:text-sm text-gray-600">Renewable Energy Generated</p>
           </div>
         </section> */}
@@ -193,7 +194,7 @@ const HomeComp = () => {
         <section className='w-[90%]  flex flex-col justify-evenly items-center' >
 
           <div>
-            <h1 className='text-6xl lg:text-4xl xxs:text-2xl xs:text-2xl sm:text-4xl md:text-4xl xxs:text-center xs:text-center font-semibold text-gray-700 p-4' >Meet Our Muet Faculty Reviews</h1>
+            <h2 className='text-6xl lg:text-4xl xxs:text-2xl xs:text-2xl sm:text-4xl md:text-4xl xxs:text-center xs:text-center font-semibold text-gray-700 p-4' >Meet Our Muet Faculty Reviews</h2>
             <p className='text-lg xxs:text-sm xs:text-sm sm:text-lg md:text-lg xxs:text-center sm:text-center md:text-center xs:text-center font-semibold text-gray-700 p-4' >Discover what educators and experts are saying about UneComp</p>
           </div>
           <FacultyReviewCarousel />
@@ -202,7 +203,7 @@ const HomeComp = () => {
         <section className='w-full  xxs:flex-col sm:flex-col md:flex-col xs:flex-col flex items-center justify-center'>
           <div className='w-[70%] py-8 xxs:w-full sm:w-full md:w-full xs:w-full flex  xxs:py-4 sm:py-4 md:py-4 xs:py-4 gap-40 justify-end items-center h-full bg-green-800' >
             <div className='h-full w-[50%] xxs:w-full sm:w-full md:w-full xs:w-full flex flex-col justify-center items-start xxs:items-center sm:items-center md:items-center xs:items-center ' >
-              <h1 className='text-6xl lg:text-2xl   xxs:text-2xl sm:text-4xl md:text-2xl xs:text-2xl font-semibold text-white p-4' >Get in Touch</h1>
+              <h2 className='text-6xl lg:text-2xl   xxs:text-2xl sm:text-4xl md:text-2xl xs:text-2xl font-semibold text-white p-4' >Get in Touch</h2>
               <p className='text-lg lg:text-lg xxs:text-sm xs:text-sm sm:text-sm md:text-sm xxs:text-center xs:text-center sm:text-center md:text-center font-semibold text-white p-4' >Have any questions or concerns? Feel free to reach out to us. We're here to help!</p>
             {
               !session && <Link className='w-full flex justify-center items-center' href="/auth/login" > 
@@ -227,7 +228,7 @@ const HomeComp = () => {
 
         <section className="w-full  xxs:overflow-y-scroll sm:overflow-y-scroll md:overflow-y-scroll xs:overflow-y-scroll  bg-gray-200 flex flex-col items-center p-8">
           <div className="w-full flex flex-col justify-center items-center mb-8">
-            <h1 className="text-6xl lg:text-4xl xxs:text-4xl sm:text-5xl md:text-5xl xs:text-4xl font-semibold text-gray-700 p-4">FAQ</h1>
+            <h2 className="text-6xl lg:text-4xl xxs:text-4xl sm:text-5xl md:text-5xl xs:text-4xl font-semibold text-gray-700 p-4">FAQ</h2>
             <p className="text-lg lg:text-sm xxs:text-sm sm:text-lg md:text-lg xs:text-sm font-semibold text-gray-700 p-4 text-center">
               Have any questions or concerns? Feel free to reach out to us. We're here to help!
             </p>
@@ -267,7 +268,7 @@ const HomeComp = () => {
         className="px-4 xxs:px-2 sm:px-2 md:px-2 xs:px-2 xxs:py-4 xs:py-2 py-6 flex justify-between items-center cursor-pointer bg-slate-300 hover:bg-slate-400 transition-colors"
         onClick={() => toggleQuestion(index)}
       >
-        <h1 className="text-2xl lg:text-xl xxs:text-xl sm:text-2xl md:text-2xl xs:text-xl font-semibold text-gray-700">{item.question}</h1>
+        <h2 className="text-2xl lg:text-xl xxs:text-xl sm:text-2xl md:text-2xl xs:text-xl font-semibold text-gray-700">{item.question}</h2>
         <p className="text-4xl xxs:text-2xl xs:text-2xl font-semibold text-gray-700">
           {openQuestion === index ? '-' : '+'}
         </p>
@@ -284,7 +285,7 @@ const HomeComp = () => {
 
           <div className=" w-[50%] xxs:w-full xs:w-full sm:w-full md:w-full flex xxs:mt-4 xs:mt-4 flex-col justify-center items-center">
             <FaRegQuestionCircle size={50} />
-            <h1 className="text-4xl lg:text-2xl xxs:text-xl xs:text-xl sm:text-xl md:text-xl font-semibold text-gray-700 p-4">Still have a Question?</h1>
+            <h2 className="text-4xl lg:text-2xl xxs:text-xl xs:text-xl sm:text-xl md:text-xl font-semibold text-gray-700 p-4">Still have a Question?</h2>
             <p className="text-lg lg:text-sm xxs:text-sm xs:text-sm sm:text-xl md:text-xl font-semibold text-gray-700 p-4 text-center">
               Feel free to reach out to us. We're here to help!
             </p>
@@ -297,7 +298,7 @@ const HomeComp = () => {
         </section>
 
         <section className='w-full py-8 xxs:py-4 sm:py-4 md:py-4 xs:py-4 flex flex-col justify-center items-center' >
-          <h1 className='text-6xl lg:text-4xl xxs:text-2xl sm:text-4xl md:text-4xl xs:text-2xl xxs:text-center sm:text-center md:text-center xs:text-center font-semibold text-gray-700 p-4' >What our customers say</h1>
+          <h2 className='text-6xl lg:text-4xl xxs:text-2xl sm:text-4xl md:text-4xl xs:text-2xl xxs:text-center sm:text-center md:text-center xs:text-center font-semibold text-gray-700 p-4' >What our customers say</h2>
           <p className='text-lg lg:text-sm w-[50%] xxs:w-[90%] sm:w-[90%] md:w-[90%] text-justify xxs:text-sm xs:text-sm xxs:text-center xs:text-center font-semibold text-gray-700 p-4' >At UneComp, we empower innovation with our premium selection of electronic components. Trusted by professionals and students alike, our commitment to quality ensures that every purchase meets your highest standards for reliability and performance..</p>
           <CarouselComp />
         </section>
@@ -309,16 +310,16 @@ const HomeComp = () => {
         <footer className="w-[100vw]  flex flex-col justify-between xxs:justify-between sm:justify-between md:justify-between items-center bg-gray-100">
           <div className="w-full   flex xxs:flex-col xs:flex-col sm:flex-col md:flex-col justify-evenly items-start  p-8">
             <div className="w-[20%]  xxs:w-full xs:w-full sm:w-full md:w-full xxs:h-40  xs:h-40 h-[80%] flex flex-col justify-start items-center">
-              <h1 className="text-4xl lg:text-2xl xxs:text-4xl sm:text-4xl md:text-4xl xs:text-4xl font-semibold text-gray-700 select-none p-4">Une Comp</h1>
+              <h2 className="text-4xl lg:text-2xl xxs:text-4xl sm:text-4xl md:text-4xl xs:text-4xl font-semibold text-gray-700 select-none p-4">Une Comp</h2>
             </div>
             <div className="w-[20%] xxs:w-full xs:w-full sm:w-full md:w-full xxs:h-40 xs:h-80 h-[80%] flex flex-col justify-start items-center">
-              <h1 className="text-4xl lg:text-xl xxs:text-2xl sm:text-2xl md:text-2xl xs:text-2xl  font-semibold text-gray-700 select-none p-4">Platform</h1>
+              <h2 className="text-4xl lg:text-xl xxs:text-2xl sm:text-2xl md:text-2xl xs:text-2xl  font-semibold text-gray-700 select-none p-4">Platform</h2>
               <p className="text-lg lg:text-sm xxs:text-sm sm:text-lg md:text-lg font-semibold text-gray-700 p-2 transition-transform duration-300 cursor-pointer hover:scale-105">Delivery Solutions</p>
               <p className="text-lg lg:text-sm xxs:text-sm sm:text-lg md:text-lg font-semibold text-gray-700 p-2 transition-transform duration-300 cursor-pointer hover:scale-105">Project related Products</p>
               <p className="text-lg lg:text-sm xxs:text-sm sm:text-lg md:text-lg font-semibold text-gray-700 p-2 transition-transform duration-300 cursor-pointer hover:scale-105">Project Deals</p>
             </div>
             <div className="w-[20%] xxs:w-full  xs:w-full sm:w-full md:w-full xxs:h-48 xs:h-48 h-[80%] flex flex-col justify-start items-center">
-              <h1 className="text-4xl lg:text-xl xxs:text-2xl sm:text-2xl md:text-2xl xs:text-2xl font-semibold text-gray-700 select-none p-4">Company</h1>
+              <h2 className="text-4xl lg:text-xl xxs:text-2xl sm:text-2xl md:text-2xl xs:text-2xl font-semibold text-gray-700 select-none p-4">Company</h2>
               <Link href={"/about"} >
               <p className="text-lg lg:text-sm xxs:text-sm  xs:text-sm sm:text-lg md:text-lg font-semibold text-gray-700 p-2 transition-transform duration-300 cursor-pointer hover:scale-105">About</p>
               </Link>
@@ -334,7 +335,7 @@ const HomeComp = () => {
               {/* <p className="text-lg lg:text-sm xxs:text-sm xs:text-sm font-semibold text-gray-700 p-2 transition-transform duration-300 cursor-pointer hover:scale-105">Contact</p> */}
             </div>
             <div className="w-[30%]  xxs:w-full xs:w-full sm:w-full md:w-full xxs:h-44   flex flex-col justify-start items-center">
-              <h1 className="text-4xl lg:text-xl xs:text-2xl sm:text-2xl md:text-2xl xxs:text-2xl font-semibold text-gray-700 select-none p-4">Contact Support</h1>
+              <h2 className="text-4xl lg:text-xl xs:text-2xl sm:text-2xl md:text-2xl xxs:text-2xl font-semibold text-gray-700 select-none p-4">Contact Support</h2>
               <p className="text-lg lg:text-sm xxs:text-sm xs:text-sm font-semibold text-gray-700 p-2 transition-transform duration-300 cursor-pointer hover:scale-105">Number</p>
               <p className="text-lg lg:text-sm xxs:text-sm xs:text-sm font-semibold text-gray-700 p-2 transition-transform duration-300 cursor-pointer hover:scale-105">Email</p>
               <p className="text-lg lg:text-sm xxs:text-sm xs:text-sm font-semibold text-gray-700 p-2 transition-transform duration-300 cursor-pointer hover:scale-105">Whatsapp number</p>
