@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
-import profile from '@/assets/profile.jpeg';
+import profile from '@/assets/profile.webp';
 import sessionAction from '@/actions/sessionAction';
 import profileAction from '@/actions/profileAction';
 import { MdOutlinePending } from "react-icons/md";
