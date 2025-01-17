@@ -63,7 +63,7 @@ const HomeComp = () => {
               <p className='text-sm font-semibold' >Une Comp</p>
             </div>
            <div className="w-full font-bold text-6xl xxs:text-xl xs:text-2xl sm:text-3xl md:text-5xl lg:text-5xl flex justify-evenly items-center scale-[0.9] origin-left">
-  <h1>Buy Electronic Components in Pakistan</h1>
+  <title>Buy Electronic Components in Pakistan</title>
 </div>
 
 
@@ -132,7 +132,7 @@ const HomeComp = () => {
             <div className='w-[49%] xxs:w-full sm:w-full md:w-full xs:w-full flex flex-col justify-evenly xxs:items-start sm:items-start md:items-start  items-center' >
               <TbHandFinger size={50} />
               <h2 className='text-4xl lg:text-lg xxs:text-xl sm:text-xl md:text-xl xs:text-xl font-semibold text-gray-700 p-4' >Comprehensive Product Selection</h2>
-              <p className='text-lg lg:text-sm xxs:text-sm xs:text-sm font-semibold text-gray-700 p-4' >Explore a diverse range of high-quality electronic components tailored for student projects.</p>
+              <p className='text-lg lg:text-sm xxs:text-sm xs:text-sm font-semibold text-gray-700 p-4' >Explore a diverse range of high-quality electronic components tailored for student projects and customers.</p>
 
             </div>
             <div className='w-[49%] xxs:w-full sm:w-full md:w-full xs:w-full  flex flex-col justify-evenly xxs:items-start sm:items-start md:items-start  items-center' >
@@ -144,7 +144,7 @@ const HomeComp = () => {
             <div className='w-[49%] xxs:w-full sm:w-full md:w-full xs:w-full flex flex-col justify-evenly xxs:items-start sm:items-start md:items-start  items-center' >
               <MdOutlinePriceCheck size={50} />
               <h2 className='text-4xl lg:text-lg xxs:text-xl sm:text-xl md:text-xl xs:text-xl font-semibold text-gray-700 p-4' >Competitive Pricing</h2>
-              <p className='text-lg lg:text-sm xxs:text-sm xs:text-sm font-semibold text-gray-700 p-4' >Enjoy competitive prices on all our products, designed to fit your budget without compromising on quality.</p>
+              <p className='text-lg lg:text-sm xxs:text-sm xs:text-sm font-semibold text-gray-700 p-4' >Enjoy competitive prices on all our electronic products, designed to fit your budget without compromising on quality.</p>
 
             </div>
           </div>

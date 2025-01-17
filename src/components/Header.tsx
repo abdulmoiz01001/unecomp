@@ -120,8 +120,7 @@ const HeaderComp = ({ handleClick }: { handleClick: () => void }) => {
             <Box className='md:hidden' w={{ base: '80%', md: '20%' }}>
               <Heading as="h1" size="2xl" bgClip="text" bgGradient="linear(to-r, green.500, green.300, green.500)">
               <span className='lg:text-2xl flex justify-center items-center' >
-                
-                  UneComp
+                 UneComp
                 </span>
               </Heading>
             </Box>
