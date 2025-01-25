@@ -58,7 +58,6 @@ const HomeComp = () => {
 
     <>
 <Helmet>
-<title>Buy Electronic Components in Pakistan</title>
 <meta name="description" content=" UneComp offers a wide range of high-quality electronic components, microelectronic  components ,and printed-circuit components in affordable price ." />
             </Helmet>
       <section className='flex w-[100vw] flex-col justify-center items-center' >
@@ -68,6 +67,8 @@ const HomeComp = () => {
               <p className='text-sm font-semibold' >Une Comp</p>
             </div>
            <div className="w-full font-bold text-6xl xxs:text-xl xs:text-2xl sm:text-3xl md:text-5xl lg:text-5xl flex justify-evenly items-center scale-[0.9] origin-left">
+           <title>Buy Electronic Components in Pakistan</title>
+
   <h1>Buy Electronic Components in Pakistan</h1>
 </div>
 
