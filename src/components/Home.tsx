@@ -15,6 +15,8 @@ import Link from 'next/link'
 import { MdOutlinePriceCheck, MdOutlineSupportAgent } from 'react-icons/md'
 import sessionAction from '@/actions/sessionAction';
 import touch from '@/assets/getintouch.webp'
+import { Helmet } from "react-helmet";
+
 // import { io } from "socket.io-client";
 const HomeComp = () => {
   const [ session, setSession ] = useState<any>(null)
@@ -55,7 +57,10 @@ const HomeComp = () => {
   return (
 
     <>
-
+<Helmet>
+<title>Buy Electronic Components in Pakistan</title>
+<meta name="description" content=" UneComp offers a wide range of high-quality electronic components, microelectronic  components ,and printed-circuit components in affordable price ." />
+            </Helmet>
       <section className='flex w-[100vw] flex-col justify-center items-center' >
         <main className='w-[100%] py-8  flex xs:flex-col xxs:flex-col  sm:flex-col md:flex-col justify-end xxs:justify-center xs:justify-center sm:justify-center md:justify-center gap-40 xxs:gap-2 xs:gap-2 items-center ' >
           <section className='w-[45%] lg:ml-4 xxs:mt-10 xxs:w-full xs:w-full sm:w-[95%] md:w-[95%] sm:pl-0 md:pl-0  xxs:h-[60%] xs:h-[60%] sm:h-[60%] md:h-[60%] xxs:pl-1 xs:pl-1 pl-4 flex flex-col gap-8 justify-center items-start' >
@@ -63,14 +68,13 @@ const HomeComp = () => {
               <p className='text-sm font-semibold' >Une Comp</p>
             </div>
            <div className="w-full font-bold text-6xl xxs:text-xl xs:text-2xl sm:text-3xl md:text-5xl lg:text-5xl flex justify-evenly items-center scale-[0.9] origin-left">
-  <title>Buy Electronic Components in Pakistan</title>
   <h1>Buy Electronic Components in Pakistan</h1>
 </div>
 
 
             <div className='w-full  flex justify-start items-center  ' >
               <p className='text-lg xxs:text-sm xs:text-lg sm:text-lg md:text-lg lg:text-sm  font-bold  xxs:p-2 xs:p-2 sm:pr-0 md:pr-0 pr-40' >
-              UneComp offers a wide range of high-quality electronic components, microelectronic  components ,and printed-circuit components in affordable price .               </p>
+              Shop a wide range of high-quality electronic components, including transistors, capacitors, resistors, and more. Perfect for hobbyists, students, engineers, and manufacturers. Fast shipping and competitive prices!              </p>
             </div>
             <div className='w-full gap-12 xxs:gap-4  xs:gap-4 sm:gap-4 md:gap-4 flex xxs:flex-col xs:flex-col sm:flex-col md:flex-col justify-start items-center  ' >
           <Link href="/store" >
