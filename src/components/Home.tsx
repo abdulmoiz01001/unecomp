@@ -64,6 +64,7 @@ const HomeComp = () => {
             </div>
            <div className="w-full font-bold text-6xl xxs:text-xl xs:text-2xl sm:text-3xl md:text-5xl lg:text-5xl flex justify-evenly items-center scale-[0.9] origin-left">
   <title>Buy Electronic Components in Pakistan</title>
+  <h1>Buy Electronic Components in Pakistan</h1>
 </div>
 
 
@@ -87,7 +88,7 @@ const HomeComp = () => {
           <section className='w-[40%]   relative xxs:w-full xs:w-full sm:w-full md:w-full h-full xxs:h-[60%] sm:h-[60%] md:h-[60%] flex justify-center items-center' >
             <div className="absolute  -left-40 xxs:left-2 xs:left-10 sm:left-20 md:left-20 bg-white lg:w-[500px] w-[600px] xxs:w-[90%]  xs:w-[340px] rounded-lg shadow-3 xs:p-2 p-6">
               <div className="flex justify-start  items-center gap-8 xxs:mb-0 mb-4">
-                <Image src={diode} alt="" width={500} height={500} className="w-[120px] h-[120px] xxs:w-[60px] xxs:h-[60px] object-cover rounded-full shadow-md" />
+                <Image src={diode} alt="diode image" width={500} height={500} className="w-[120px] h-[120px] xxs:w-[60px] xxs:h-[60px] object-cover rounded-full shadow-md" />
                 <p className="text-xl xxs:text-sm xs:text-sm lg:text-lg font-semibold text-gray-800">Wide Range of Components</p>
               </div>
               <div className="flex bg-slate-200  flex-col justify-between items-start xxs:p-2 p-4 rounded-lg shadow-inner">
@@ -100,7 +101,7 @@ const HomeComp = () => {
 
             <div className='w-full  flex justify-center items-center h-[80%] bg-[#285d31]' >
 
-              <Image src={back} alt='home' width={500} height={500} className='w-[90%] rounded-full h-[90%]' />
+              <Image src={back} alt='home image' width={500} height={500} className='w-[90%] rounded-full h-[90%]' />
             </div>
           </section>
         </main>
@@ -213,7 +214,7 @@ const HomeComp = () => {
             
             </div>
             <div className='h-full overflow-hidden xxs:hidden xs:hidden sm:hidden md:hidden w-[20%] rounded-tl-full rounded-bl-full bg-white' >
-<Image    src={touch} alt="ds" width={500} height={500} className=" w-full h-full  object-cover  shadow-md" />     
+<Image    src={touch} alt="Get in touch image" width={500} height={500} className=" w-full h-full  object-cover  shadow-md" />     
             </div>
           </div>
           <div className='w-[30%] xxs:hidden xs:hidden sm:hidden md:hidden h-full bg-gray-200' >

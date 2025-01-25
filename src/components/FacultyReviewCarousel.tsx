@@ -8,16 +8,19 @@ const FacultyReviewCarousel = () => {
       name: 'John Doe',
       review: '“Flow transformed my energy use. Efficient, green tech, outstanding service!”',
       image: logo,
+      alt:'a man image',
     },
     {
       name: 'Jane Smith',
       review: '“The best decision I ever made! Incredible support and innovative solutions.”',
       image: logo,
+      alt:'a man image',
     },
     {
       name: 'Alice Johnson',
       review: '“A true game-changer in energy efficiency. Highly recommend!”',
       image: logo,
+      alt:'a man image',
     },
     // Add more reviews here
   ];

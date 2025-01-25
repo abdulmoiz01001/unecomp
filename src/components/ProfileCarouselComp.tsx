@@ -9,6 +9,7 @@ const generateRandomReviews = (count : any) => {
     name: `Person ${index + 1}`,
     review: `“This is a review text for person ${index + 1}.”`,
     image: logo,
+    alt:'a man image',
   }));
 };
 

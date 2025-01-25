@@ -25,18 +25,22 @@ const CarouselComp = () => {
       image: 'https://th.bing.com/th/id/R.d7892d4f9aa766b5bfcbfbac3eb8dac0?rik=9o2b8eDDkrcrQw&pid=ImgRaw&r=0',
       text: '“Premium quality products at competitive prices, ensuring customer satisfaction with every purchase.!”',
       author: 'Nizam Soomro ',
+      alt:'electronic components image',
       department: 'Department of Telecommunication',
     },
     {
       image: 'https://th.bing.com/th/id/R.a92aee1ea3d5226671f83ec87147cc0f?rik=Tjfu5fYesvoLkQ&pid=ImgRaw&r=0',
       text: '“Exceptional products at fair prices, dedicated to delivering unparalleled customer satisfaction.”',
       author: 'Muhammad Hasnain',
+      alt:'geometrical components image',
       department: 'Department of Telecommunication',
     },
     {
       image: 'https://th.bing.com/th/id/R.5e7c5c0e7d0b5a5b7a5f7e2f3a9c5f8f?rik=4v5Z%2f8w0i%2b9Q9A&pid=ImgRaw&r=0',
       text: '“Top-tier products at unbeatable prices, committed to providing the best customer service.”',
       author: 'Muhammad Ali',
+      alt:'electronic components image',
+
       department: 'Department of Electrical Engineering',
     }
     // Add more slides as needed
