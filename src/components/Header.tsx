@@ -25,9 +25,7 @@ const HeaderComp = ({ handleClick }: { handleClick: () => void }) => {
   const count = useAppSelector((state) => state.carts.carts);
   const [searchTerm, setSearchTerm] = useState('');
   const filteredProducts = useSearchProducts(searchTerm);
-  console.log(filteredProducts);
-
-  console.log(filteredProducts);
+  console.log(filteredProducts);;
 
 
   useEffect(() => {
