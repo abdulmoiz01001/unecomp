@@ -22,10 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-       <head>
-    <script src="https://analytics.ahrefs.com/analytics.js" data-key="Q8YunehhMcBR/5a7XiaiDw" async></script>
-    
-  </head>
+       
       <body className={inter.className}>
         <StoreProvider>
 
