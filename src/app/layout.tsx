@@ -9,8 +9,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: " Une Comp",
-    template: " %s - Une Comp "
+    default: " UneComp BEST ELECTRONIC COMPONENTS IN PAKISTAN",
+    template: " %s - UneComp BEST ELECTRONIC COMPONENTS IN PAKISTAN "
   },
   description: "MUET Students Projects Components Providers.",
 };

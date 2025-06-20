@@ -57,18 +57,12 @@ const HomeComp = () => {
   return (
 
     <>
- <Helmet>
-    <title>Buy Electronic Components in Pakistan</title>
-    <meta name="description" content="UneComp offers a wide range of high-quality electronic components, microelectronic components, and printed-circuit components at affordable prices." />
-  </Helmet>
 
       <section className='flex w-[100vw] flex-col justify-center items-center' >
         <main className='w-[100%] py-8  flex xs:flex-col xxs:flex-col  sm:flex-col md:flex-col justify-end xxs:justify-center xs:justify-center sm:justify-center md:justify-center gap-40 xxs:gap-2 xs:gap-2 items-center ' >
           <section className='w-[45%] lg:ml-4 xxs:mt-10 xxs:w-full xs:w-full sm:w-[95%] md:w-[95%] sm:pl-0 md:pl-0  xxs:h-[60%] xs:h-[60%] sm:h-[60%] md:h-[60%] xxs:pl-1 xs:pl-1 pl-4 flex flex-col gap-8 justify-center items-start' >
           
            <div className="w-full font-bold text-6xl xxs:text-xl xs:text-2xl sm:text-3xl md:text-5xl lg:text-5xl flex justify-evenly items-center scale-[0.9] origin-left">
-           <title>Buy Electronic Components in Pakistan</title>
-
   <h1>Buy Electronic Components in Pakistan</h1>
 </div>
 
