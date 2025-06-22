@@ -93,7 +93,7 @@ const HomeComp = () => {
               <div className="flex bg-slate-200  flex-col justify-between items-start xxs:p-2 p-4 rounded-lg shadow-inner">
                 <p className="text-lg xxs:text-sm xs:text-sm sm:text-sm  md:text-sm lg:text-sm font-bold text-gray-700 mb-2">Electronic Components</p>
                 <div className=" xxs:text-sm sm:text-sm md:text-sm lg:text-sm xs:text-sm text-gray-600">
-                  Partner with us to access top-quality electronic components for your projects.
+                  Collab with us to access top-quality electronic components for your projects.
                 </div>
               </div>
             </div>
