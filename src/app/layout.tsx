@@ -35,6 +35,7 @@ export default function RootLayout({
               })(window,document,'script','dataLayer','GTM-N75Z8HBK');`,
           }}
         />
+         <link rel="canonical" href="https://unecomp.site" />
       </Head>
 
       <body className={inter.className}>
