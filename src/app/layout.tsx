@@ -4,7 +4,7 @@ import "./globals.css";
 import { ChakraProvider } from '@chakra-ui/react';
 import StoreProvider from "./StoreProvider";
 import Drawar from "@/components/DrawerComp";
-import Head from 'next/head';
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,22 +24,40 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        {/* Google Tag Manager script in head */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-N75Z8HBK');`,
-          }}
+      <head>
+        {/* Google Analytics */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-4XBBQ3QHS9"
+          strategy="afterInteractive"
         />
-         <link rel="canonical" href="https://unecomp.site" />
-      </Head>
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-4XBBQ3QHS9');
+          `}
+        </Script>
+
+        {/* Google Tag Manager */}
+        <Script id="gtm-init" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){
+              w[l]=w[l]||[];
+              w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+              var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+              j.async=true;
+              j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+              f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-N75Z8HBK');
+          `}
+        </Script>
+      </head>
 
       <body className={inter.className}>
-        {/* Google Tag Manager noscript in body */}
+        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-N75Z8HBK"

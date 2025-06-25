@@ -69,7 +69,7 @@ const HomeComp = () => {
 
             <div className='w-full  flex justify-start items-center  ' >
               <p className='text-lg xxs:text-sm xs:text-lg sm:text-lg md:text-lg lg:text-sm  font-bold  xxs:p-2 xs:p-2 sm:pr-0 md:pr-0 pr-40' >
-              Shop a wide range of high-quality electronic components, including transistors, capacitors, resistors, and more. Perfect for hobbyists, students, engineers, and manufacturers. Fast shipping and competitive prices!              </p>
+              Shop a wide range of high-quality electronic components, including transistors, capacitors, resistors, and more. Perfect for engineers, and manufacturers. Fast shipping and competitive prices!              </p>
             </div>
             <div className='w-full gap-12 xxs:gap-4  xs:gap-4 sm:gap-4 md:gap-4 flex xxs:flex-col xs:flex-col sm:flex-col md:flex-col justify-start items-center  ' >
           <Link href="/store" >

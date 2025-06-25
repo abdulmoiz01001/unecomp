@@ -83,7 +83,7 @@ const SignupComp = () => {
             </InputGroup>
             <RadioGroup defaultValue='2'>
                 <Stack spacing={5} direction='row'>
-                    <h1>Gender :</h1> <br ></br>
+                    <h2>Gender :</h2> <br ></br>
                     <Radio  colorScheme='red' value='male' checked={gender === "male"} onChange={(e)=>{setGender(e.currentTarget.value)}} >
                         Male
                     </Radio>
